@@ -2341,12 +2341,12 @@ button.search-button:hover,
 
 .text-with-stars:before{
   left: -130px;
-  background-image: url(../images/left-arrow.png);
+  background-image: url(assets/images/left-arrow.png);
 }
 
 .text-with-stars:after{
   right: -130px;
-  background-image: url(../images/right-arrow.png);
+  background-image: url(assets/images/right-arrow.png);
 }
 
 /* Page 404 */
@@ -4380,7 +4380,7 @@ button.search-button:hover,
     }
 
     .instagram-feed .nv-instafeed-item > a{
-      cursor: url(../images/icon_zoomin.png) 24 24, auto;
+      cursor: url(assets/images/icon_zoomin.png) 24 24, auto;
     }
 
     .nv-instafeed-item a{
@@ -4860,28 +4860,28 @@ button.search-button:hover,
       height: 16px;
       left: 20px;
       top: 15px;
-      background: url(../images/15x16_icon1.jpg) no-repeat;
+      background: url(assets/images/15x16_icon1.jpg) no-repeat;
     }
 
     .tribe-events-bar .custom-select .select-list li:nth-child(1):before{
-      background: url(../images/15x16_icon2.jpg);
+      background: url(assets/images/15x16_icon2.jpg);
     }
 
     .tribe-events-bar .custom-select .select-list li:nth-child(2):before{
-      background: url(../images/15x16_icon3.jpg);
+      background: url(assets/images/15x16_icon3.jpg);
     }
 
     .tribe-events-bar .custom-select .select-list li:nth-child(3):before{
-      background: url(../images/15x16_icon4.jpg);
+      background: url(assets/images/15x16_icon4.jpg);
     }
 
     .tribe-events-bar .custom-select .select-list li:nth-child(4):before{
-      background: url(../images/15x16_icon5.jpg);
+      background: url(assets/images/15x16_icon5.jpg);
       width: 12px;
     }
 
     .tribe-events-bar .custom-select .select-list li:nth-child(5):before{
-      background: url(../images/15x16_icon6.jpg);
+      background: url(assets/images/15x16_icon6.jpg);
     }
 
   .tribe-events-filters-content{
@@ -7496,7 +7496,7 @@ button.search-button:hover,
   right: 0;
   bottom: 0;
   left: 0;
-  cursor: url(../images/icon_zoomin.png) 24 24, auto;
+  cursor: url(assets/images/icon_zoomin.png) 24 24, auto;
 }
 
 .portfolio-holder .project:hover .project-link{
@@ -8821,11 +8821,11 @@ button.search-button:hover,
   .widget .rating .empty-state{
     width: 70px;
     height: 14px;
-    background-image: url("../images/icon_star_empty_small.png");
+    /* background-image: url("assets/images/icon_star_empty_small.png"); */
   }
 
   .widget .rating .fill-state{
-    background-image: url("../images/icon_star_small.png");
+    /* background-image: url("assets/images/icon_star_small.png"); */
   }
 
   /*----------- Comment --------------*/
@@ -8855,7 +8855,7 @@ button.search-button:hover,
 .footer .main-footer{
   padding: 70px 0;
   color: #d2d2d2;
-  background: url(../images/1920x456_bg1.jpg) center no-repeat;
+  background: url(assets/images/1920x456_bg1.jpg) center no-repeat;
   background-size: cover;
 }
 
