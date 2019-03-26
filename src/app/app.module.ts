@@ -11,6 +11,7 @@ import { IndexComponent } from './index/index.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AbouthohnComponent } from './abouthohn/abouthohn.component';
+import { HeaderService } from './service/header.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { AbouthohnComponent } from './abouthohn/abouthohn.component';
     BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [HeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-<header id="header" class="sticky-header fixed-header">
+<header id="header" class="sticky-header {{headerStyle}}">
 
   <!-- top-header -->
 
@@ -8,7 +8,7 @@
 
     <div class="logo-wrap">
 
-      <a href="index.html" class="logo"><img src="assets/images/logo2.png" alt=""></a>
+      <a routerLink="/" class="logo"><img src="assets/images/logo2.png" alt=""></a>
 
     </div>
 
@@ -24,7 +24,7 @@
           
           <nav id="main-navigation" class="main-navigation">
             <ul id="menu" class="clearfix">
-              <li class="dropdown current"><a href="#">Home</a>
+              <li class="dropdown current"><a routerLink="/">Home</a>
                 <!--sub menu-->
                 <div class="sub-menu-wrap">
                   <ul>
@@ -33,7 +33,7 @@
                       <div class="sub-menu-wrap sub-menu-inner">
                         <ul>
                           <li class="current"><a href="index.html">Candidate Layout 1</a></li>
-                          <li><a href="home_2.html">Candidate Layout 2</a></li>
+                          <li><a routerLink="/about">Candidate Layout 2</a></li>
                           <li><a href="home_3.html">Party Layout 1</a></li>
                           <li><a href="home_4.html">Party Layout 2</a></li>
                         </ul>
