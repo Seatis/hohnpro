@@ -22,6 +22,8 @@
     "@angular/platform-browser-dynamic": "^7.2.2",
     "@angular/router": "^7.2.2",
     "core-js": "^2.4.1",
+    "primeicons": "^1.0.0",
+    "primeng": "^7.1.0",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.0.0-rc.0",
     "rxjs-tslint": "^0.1.6",

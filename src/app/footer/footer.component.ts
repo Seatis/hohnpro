@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from '../service/token.service';
 
 @Component({
   selector: 'hohn-footer',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tokenService: TokenService) { }
 
   ngOnInit() {
   }

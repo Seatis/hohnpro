@@ -12,6 +12,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AbouthohnComponent } from './abouthohn/abouthohn.component';
 import { HeaderService } from './service/header.service';
+import { DynamicScriptLoaderService } from './service/dynamic-script-loader.service';
+import { TweetComponent } from './common/tweet/tweet.component';
+import { TokenService } from './service/token.service';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 
 @NgModule({
@@ -20,7 +24,8 @@ import { HeaderService } from './service/header.service';
     IndexComponent,
     HeaderComponent,
     FooterComponent,
-    AbouthohnComponent
+    AbouthohnComponent,
+    TweetComponent
   ],
   imports: [
     BrowserModule,
@@ -28,9 +33,10 @@ import { HeaderService } from './service/header.service';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ProgressSpinnerModule
   ],
-  providers: [HeaderService],
+  providers: [HeaderService, DynamicScriptLoaderService, TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,7 +6,9 @@ export class HeaderService {
 
   public headerStyle: Subject<string> = new Subject<string>();
 
-  constructor() { }
+  constructor() {
+    
+   }
 
   public setHeaderStyle(style: string): void {
     this.headerStyle.next(style);

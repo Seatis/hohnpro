@@ -10,7 +10,7 @@ const APP_ROUTING : Routes = [
   // {path: '', redirectTo: 'home', pathMatch: 'full'},
   // {path: 'home', component: OrderscreenComponent},
   {path: '', component: IndexComponent},
-  {path: 'about', component: AbouthohnComponent},
+  {path: 'about', component: AbouthohnComponent, runGuardsAndResolvers: 'always'},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

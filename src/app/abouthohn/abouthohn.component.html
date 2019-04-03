@@ -1,4 +1,4 @@
-<div id="content">
+<div id="content" *ngIf="tokenService.loaded">
       
   <!-- - - - - - - - - - - - - - Breadcrumbs - - - - - - - - - - - - - - - - -->
 
@@ -10,7 +10,7 @@
 
       <ul class="breadcrumbs">
 
-        <li><a href="index.html">Home</a></li>
+        <li><a routerLink="/">Home</a></li>
         <li>Meet Adam</li>
 
       </ul>
@@ -37,7 +37,7 @@
           </div>
 
           <div class="content-element3">
-            <img src="images/750x550_img1.png" alt="">
+            <img src="assets/images/750x550_img1.png" alt="">
           </div>
 
           <div class="content-element3">
@@ -61,7 +61,7 @@
           <div class="content-element2">
             <h5 class="tt-up">Adam’s Priorities</h5>
               <div class="clearfix">
-                <img src="images/360x460_img1.png" alt="" class="alignleft">
+                <img src="assets/images/360x460_img1.png" alt="" class="alignleft">
                   
                 <p class="content-element5">Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue. Nam elit agna, endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. </p>
                 
@@ -148,8 +148,9 @@
           </div>
 
           <!-- widget -->
+          <hohn-tweet></hohn-tweet>
 
-          <div class="widget widget-holder">
+          <!-- <div class="widget widget-holder">
             
             <div class="widget-twitter two-tweet">
 
@@ -161,7 +162,7 @@
               
             </div>
 
-          </div>
+          </div> -->
 
           <!-- widget -->
 

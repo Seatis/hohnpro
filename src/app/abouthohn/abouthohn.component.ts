@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from '../service/header.service';
+import { Router } from '@angular/router';
+import { TokenService } from '../service/token.service';
 
 @Component({
   selector: 'app-abouthohn',
@@ -8,10 +10,14 @@ import { HeaderService } from '../service/header.service';
 })
 export class AbouthohnComponent implements OnInit {
 
-  constructor(private headerService: HeaderService) { }
+  constructor(
+    private headerService: HeaderService, 
+    private tokenService: TokenService,
+    private router: Router
+    ) {}
 
   public ngOnInit(): void {
+    this.tokenService.setToken();
     this.headerService.setHeaderStyle('style-2');
   }
-
 }

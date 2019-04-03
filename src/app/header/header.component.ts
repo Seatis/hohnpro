@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HeaderService } from '../service/header.service';
+import { Router } from '@angular/router';
+import { TokenService } from '../service/token.service';
 
 @Component({
   selector: 'hohn-header',
@@ -12,10 +14,14 @@ export class HeaderComponent implements OnInit {
 
   public headerStyle: string = 'fixed-header';
 
-  constructor(private headerService: HeaderService) { }
+  constructor(
+    private headerService: HeaderService,
+    private tokenService: TokenService,
+    private router: Router
+    ) { }
 
   public ngOnInit(): void {
     this.headerService.headerStyle.subscribe( newStyle => this.headerStyle = newStyle);
   }
-
+  
 }
