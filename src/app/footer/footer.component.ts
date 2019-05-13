@@ -8,7 +8,7 @@ import { TokenService } from '../service/token.service';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private tokenService: TokenService) { }
+  constructor(public tokenService: TokenService) { }
 
   ngOnInit() {
   }

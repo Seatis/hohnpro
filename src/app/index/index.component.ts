@@ -15,7 +15,7 @@ export class IndexComponent implements OnInit {
   private mySubscription: Subscription;
 
   private loaded: boolean = true;
-  constructor(private headerService: HeaderService, private tokenService: TokenService, private router: Router, private dynamicScriptLoader: DynamicScriptLoaderService) { 
+  constructor(private headerService: HeaderService, public tokenService: TokenService) { 
     
   }
 

@@ -11,3 +11,21 @@
   </div>
 
 </div>
+
+<p-dropdown
+    [style]="{'width':'100%'}"
+    [options]="ddMock"
+    [(ngModel)]="selectedMock"
+    placeholder="Válasszon"
+    [filter]=true
+    (onChange)="change()"
+    optionLabel="label"
+>
+<ng-template let-car2 pTemplate="item">
+  <div [pTooltip]="test(car2.value)"> 
+
+      <li><span>{{car2.value.label}}, {{car2.value.desc}}</span>
+        </li> 
+  </div>
+  </ng-template>    
+</p-dropdown>

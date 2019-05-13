@@ -12,8 +12,7 @@ export class AbouthohnComponent implements OnInit {
 
   constructor(
     private headerService: HeaderService, 
-    private tokenService: TokenService,
-    private router: Router
+    public tokenService: TokenService
     ) {}
 
   public ngOnInit(): void {

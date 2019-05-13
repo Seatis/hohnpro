@@ -18,7 +18,7 @@ export class TokenService {
     }
    }
 
-   refresh() {
+   private refresh(): void {
     window.location.reload();
   }
 }

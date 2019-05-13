@@ -16,6 +16,8 @@ import { DynamicScriptLoaderService } from './service/dynamic-script-loader.serv
 import { TweetComponent } from './common/tweet/tweet.component';
 import { TokenService } from './service/token.service';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {DropdownModule} from 'primeng/dropdown';
+import {TooltipModule} from 'primeng/tooltip';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import {ProgressSpinnerModule} from 'primeng/progressspinner';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    DropdownModule,
+    TooltipModule
   ],
   providers: [HeaderService, DynamicScriptLoaderService, TokenService],
   bootstrap: [AppComponent]
