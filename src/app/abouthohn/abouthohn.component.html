@@ -148,7 +148,8 @@
           </div>
 
           <!-- widget -->
-          <hohn-tweet></hohn-tweet>
+          
+          <!-- <hohn-tweet></hohn-tweet> -->
 
           <!-- <div class="widget widget-holder">
             
@@ -166,7 +167,9 @@
 
           <!-- widget -->
 
-          <div class="widget widget-calendar">
+          <hohn-calendar></hohn-calendar>
+
+          <div hidden="true" class="widget widget-calendar">
 
             <h5 class="wt-title">Events Calendar</h5>
             
@@ -257,7 +260,7 @@
                   <table>
                     <tr>
                       <!--titles for td-->                  
-                      <th colspan="7">October 2018</th>
+                      <th colspan="7">September 2018</th>
                     </tr>
                     <tr class="days">
                       <td>M</td>
@@ -351,8 +354,14 @@
             </div>
 
           </div>
-
-          <!-- LightWidget WIDGET --><iframe src="//lightwidget.com/widgets/11f2c3cc3c93585194ab9fc96e9d576a.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+          <hohn-instafeed 
+            feedUrl="//lightwidget.com/widgets/d055906209ea577e878e7653d2cab7b4.html"
+            targetUrl="https://www.instagram.com/"
+            >
+          </hohn-instafeed>
+          <!-- LightWidget WIDGET -->
+          <!-- <iframe src="//lightwidget.com/widgets/11f2c3cc3c93585194ab9fc96e9d576a.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe> -->
+          <!-- <iframe src="//lightwidget.com/widgets/c1714bf6f1f15639a7d79670df9baed0.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe> -->
 
         </aside>
       </div>

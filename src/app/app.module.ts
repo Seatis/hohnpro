@@ -18,6 +18,8 @@ import { TokenService } from './service/token.service';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {DropdownModule} from 'primeng/dropdown';
 import {TooltipModule} from 'primeng/tooltip';
+import { InstafeedComponent } from './common/instafeed/instafeed.component';
+import { CalendarComponent } from './common/calendar/calendar.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import {TooltipModule} from 'primeng/tooltip';
     HeaderComponent,
     FooterComponent,
     AbouthohnComponent,
-    TweetComponent
+    TweetComponent,
+    InstafeedComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,

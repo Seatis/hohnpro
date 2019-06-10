@@ -18,5 +18,9 @@ export class AbouthohnComponent implements OnInit {
   public ngOnInit(): void {
     this.tokenService.setToken();
     this.headerService.setHeaderStyle('style-2');
+    let cDate: Date = new Date();
+    console.log(new Date(cDate.getFullYear(), cDate.getMonth()+1, 0).getDate());
+    console.log(new Date(new Date().setDate(0)).getDate());
+    console.log(new Date(new Date().setDate(1)).getDate());
   }
 }
