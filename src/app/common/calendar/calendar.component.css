@@ -1,0 +1,9 @@
+>>> div.owl-item.active a {
+  color: #0206c1;
+  font-weight: bold;
+}
+
+>>> div.owl-item.active td.link {
+  /*background-color: #1da1f2;*/
+  background-color: #edf213;
+}
