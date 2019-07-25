@@ -1,8 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Event} from './model/event.model';
 import {CalendarEvent} from './model/calendar.event.model';
 import {CalendarData} from './model/calendar.data.model';
-import {Events} from './events.mock';
 
 @Component({
   selector: 'hohn-calendar',
@@ -11,6 +10,7 @@ import {Events} from './events.mock';
 })
 export class CalendarComponent implements OnInit {
 
+  @Input() private events: Event[] = [];
   public monthNames: string[] = [
     'Január', 'Február', 'Március', 'Április', 'Május', 'Június',
     'Július', 'Augusztus', 'Szeptember', 'Október', 'November', 'December'
@@ -40,7 +40,7 @@ export class CalendarComponent implements OnInit {
                 let dateTmp: Date = null;
                 let urlTmp: string = null;
                 let tooltipTmp: string = null;
-                Events.forEach( (event: Event) => {
+                this.events.forEach( (event: Event) => {
                     if (
                       event.date.getFullYear() === currentDate.getFullYear() &&
                       event.date.getMonth() === currentDate.getMonth() &&

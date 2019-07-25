@@ -1,6 +1,6 @@
-import {CalendarEventModel} from '../calendar.component';
+import {CalendarEvent} from './calendar.event.model';
 
 export interface CalendarData {
   date: Date;
-  monthData: Map<number, CalendarEventModel[]>;
+  monthData: Map<number, CalendarEvent[]>;
 }

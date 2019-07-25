@@ -20,7 +20,7 @@ import {DropdownModule} from 'primeng/dropdown';
 import {TooltipModule} from 'primeng/tooltip';
 import { InstafeedComponent } from './common/instafeed/instafeed.component';
 import { CalendarComponent } from './common/calendar/calendar.component';
-
+import {HohnMenuComponent} from './common/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,8 @@ import { CalendarComponent } from './common/calendar/calendar.component';
     AbouthohnComponent,
     TweetComponent,
     InstafeedComponent,
-    CalendarComponent
+    CalendarComponent,
+    HohnMenuComponent
   ],
   imports: [
     BrowserModule,
