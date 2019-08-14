@@ -14,7 +14,7 @@ export class AbouthohnComponent implements OnInit {
   public events: Event[] = Events;
 
   constructor(
-    private headerService: HeaderService, 
+    private headerService: HeaderService,
     public tokenService: TokenService
     ) {}
 
