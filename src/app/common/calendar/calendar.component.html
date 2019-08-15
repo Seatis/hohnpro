@@ -1,50 +1,36 @@
 <div class="widget widget-calendar">
-
     <h5 class="wt-title">Eseménynaptár</h5>
-    
     <div class="owl-carousel" data-max-items="1">
-      
       <div *ngFor="let calendarData of calendarDataList" class="item">
-        
         <div class="calendar-wrap">
           <table>
             <tr>
-              <!--titles for td-->                  
+              <!--titles for td-->
               <th colspan="7">{{calendarData.date.getFullYear()}} - {{monthNames[calendarData.date.getMonth()]}}</th>
             </tr>
             <tr class="days">
-              <td>M</td>
-              <td>T</td>
-              <td>W</td>
-              <td>T</td>
-              <td>F</td>
-              <td>S</td>
-              <td>S</td>
+              <td>H</td>
+              <td>K</td>
+              <td>Sze</td>
+              <td>Cs</td>
+              <td>P</td>
+              <td>Szo</td>
+              <td>V</td>
             </tr>
-
-
             <tr *ngFor="let eventRow of calendarData.monthData | keyvalue">
               <td *ngFor="let event of eventRow.value" [ngClass]="event.url ? 'link' : ''">
+                <ng-template [ngIf]="event.url" [ngIfElse]="noUrl">
+                    <a [href]="event.url">{{event.day}}</a>
+                  </ng-template>
 
-                  <ng-template [ngIf]="event.url" [ngIfElse]="noUrl">
-                      <a [href]="event.url">{{event.day}}</a>
-                    </ng-template>
-                    
-                    <ng-template #noUrl>
-                        {{event.day}}
-                    </ng-template>
-
+                  <ng-template #noUrl>
+                      {{event.day}}
+                  </ng-template>
               </td>
             </tr>
-
           </table>
         </div>
-
-<!--        <a href="#" class="calendar-month">« Sep</a>-->
-
+  <!--        <a href="#" class="calendar-month">« Sep</a>-->
       </div>
-
-     
     </div>
-
-  </div>
+</div>

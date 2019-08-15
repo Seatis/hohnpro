@@ -13,9 +13,7 @@ export class InstafeedComponent implements OnInit {
 
   constructor(private sanitizer: DomSanitizer) { }
 
-  public ngOnInit(): void {
-    
-  }
+  public ngOnInit(): void {}
 
   public instaURL(url: string): SafeUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
