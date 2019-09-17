@@ -23,6 +23,7 @@ import { CalendarComponent } from './common/calendar/calendar.component';
 import {HohnMenuComponent} from './common/menu/menu.component';
 import {NewsletterComponent} from './common/newsletter/newsletter.component';
 import {ActionComponent} from './common/action/action.component';
+import {CarouselComponent} from './common/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {ActionComponent} from './common/action/action.component';
     CalendarComponent,
     HohnMenuComponent,
     NewsletterComponent,
-    ActionComponent
+    ActionComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
