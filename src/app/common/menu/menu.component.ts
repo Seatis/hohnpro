@@ -17,6 +17,28 @@ export class HohnMenuComponent implements OnInit {
 }
 
 export const hohnMenu: HohnMenu[] = [
+  {label: 'Főoldal', url: '/', items: null},
+  {label: 'Hírek', url: '/', items: [
+      {label: 'Archívum', url: '/'}
+    ]},
+  {label: 'Céljaim', url: '/', items: [
+      {label: 'Agrárium', url: '', items: null},
+      {label: 'Egészségügy', url: '', items: null},
+      {label: 'Oktatás', url: '', items: null},
+      {label: 'Családpolitika', url: '', items: null},
+      {label: 'Önkormányzat', url: '', items: null},
+    ]},
+  {label: 'Események', url: '/', items: [
+      {label: 'Eseménynaptár', url: '/', items: null}
+    ]},
+  {label: 'Média', url: '/', items: [
+      {label: 'Sajtómegjelenés', url: '/', items: null},
+      {label: 'Galéria', url: '/', items: null}
+    ]},
+  {label: 'Elérhetőségek', url: '/', items: null}
+];
+
+export const hohnMenuOld: HohnMenu[] = [
   {label: 'Home', url: '/', items: [
       {label: 'Home Layouts', url: '/', items: [
           {label: 'Candidate Layout 1', url: '/', items: null},

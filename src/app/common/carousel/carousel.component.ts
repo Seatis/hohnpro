@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {CarouselMock} from './carosusel.mock';
+import {Carousel} from './model/carousel.model';
 
 @Component({
   selector: 'hohn-carousel',
@@ -7,7 +9,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
-  public thing = {name: 'bar'};
+  public carouselMock: Carousel[] = CarouselMock;
+
   constructor() { }
 
   public ngOnInit(): void {

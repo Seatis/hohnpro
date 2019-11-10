@@ -1,0 +1,13 @@
+.secnews {
+  background-image: url('../../assets/images/news/20181130_kiemelt.jpg');
+  background-size: cover;
+  height: 100%;
+}
+
+iframe.lightwidget-widget {
+  margin-top: -40px;
+}
+
+.widget-holder [class*="widget-"]:not(.tabs) {
+  padding-bottom: 10px;
+}

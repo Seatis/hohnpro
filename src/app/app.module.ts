@@ -24,6 +24,7 @@ import {HohnMenuComponent} from './common/menu/menu.component';
 import {NewsletterComponent} from './common/newsletter/newsletter.component';
 import {ActionComponent} from './common/action/action.component';
 import {CarouselComponent} from './common/carousel/carousel.component';
+import {NewsMainComponent} from './newsmain/newsmain.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {CarouselComponent} from './common/carousel/carousel.component';
     HohnMenuComponent,
     NewsletterComponent,
     ActionComponent,
-    CarouselComponent
+    CarouselComponent,
+    NewsMainComponent
   ],
   imports: [
     BrowserModule,
