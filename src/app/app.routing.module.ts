@@ -5,12 +5,14 @@ import {CommonModule} from '@angular/common';
 import {APP_BASE_HREF} from '@angular/common';
 import {IndexComponent} from './index/index.component'
 import { AbouthohnComponent } from './abouthohn/abouthohn.component';
+import {NewsComponent} from './news/news.component';
 
 const APP_ROUTING : Routes = [
   // {path: '', redirectTo: 'home', pathMatch: 'full'},
   // {path: 'home', component: OrderscreenComponent},
   {path: '', component: IndexComponent},
   {path: 'about', component: AbouthohnComponent, runGuardsAndResolvers: 'always'},
+  {path: 'news', component: NewsComponent, runGuardsAndResolvers: 'always'},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

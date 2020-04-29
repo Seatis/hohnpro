@@ -50,23 +50,23 @@
 		/* ---------------------------------------------------- */
 
 		$(window).on('load resize',function() {
-			
-			//set the starting bigestHeight variable  
-		    var biggestHeight = 0;  
-		    //check each of them  
-		    $('.project > .project-description').each(function(){  
-		        //if the height of the current element is  
-		        //bigger then the current biggestHeight value  
-		        if($(this).height() > biggestHeight){  
-		            //update the biggestHeight with the  
-		            //height of the current elements  
-		            biggestHeight = $(this).height();  
-		        }  
-		    });  
-		    //when checking for biggestHeight is done set that  
-		    //height to all the elements  
-		    $('.project > .project-description').height(biggestHeight); 
-		    
+
+			//set the starting bigestHeight variable
+		    var biggestHeight = 0;
+		    //check each of them
+		    $('.project > .project-description').each(function(){
+		        //if the height of the current element is
+		        //bigger then the current biggestHeight value
+		        if($(this).height() > biggestHeight){
+		            //update the biggestHeight with the
+		            //height of the current elements
+		            biggestHeight = $(this).height();
+		        }
+		    });
+		    //when checking for biggestHeight is done set that
+		    //height to all the elements
+		    $('.project > .project-description').height(biggestHeight);
+
 		});
 
 	    /* ---------------------------------------------------- */
@@ -160,9 +160,9 @@
 
 		        var $win = $('.wrapper-container'); // or $box parent container
 				var $box = $("#navbar-menu");
-				
-			 	$win.on("click.Bst", function(event){		
-					if ( 
+
+			 	$win.on("click.Bst", function(event){
+					if (
 		            $box.has(event.target).length === 0 //checks if descendants of $box was clicked
 		            &&
 		            !$box.is(event.target) //checks if the $box itself was clicked
@@ -181,7 +181,7 @@
 		            $(this).next('.sub-menu-wrap').slideToggle(400);
 		            return false;
 		        });
-				  
+
 			});
 
 		}
@@ -227,7 +227,7 @@
 		    });
 
 		    $.mad_core.isotope();
-		     
+
 		});
 
 		/* ---------------------------------------------------- */
@@ -239,7 +239,7 @@
 		if(pageCarousel.length){
 
 			$('.owl-carousel').not('#thumbnails').each(function(){
-	
+
 				/* Max items counting */
 				var max_items = $(this).data('max-items');
 				var tablet_items = max_items;
@@ -255,7 +255,7 @@
 				var item_margin = $(this).data('item-margin');
 
 				var item_dots = $(this).data('dots');
-				
+
 				/* Install Owl Carousel */
 				$(this).owlCarousel({
 				    smartSpeed : 450,
@@ -305,7 +305,7 @@
 
 			if($('#thumbnails').length){
 				$('#thumbnails').each(function(){
-					
+
 					/* Max items counting */
 					var data = $(this).data();
 					var max_items = $(this).data('max-items');
@@ -316,7 +316,7 @@
 					var mobile_items = 1;
 
 					var autoplay_carousel = $(this).data('autoplay');
-					
+
 					$(this).owlCarousel({
 						items : max_items,
 						URLhashListener : false,
@@ -339,7 +339,7 @@
 					    }
 				    });
 				});
-			    
+
 			}
 		}
 
@@ -427,9 +427,9 @@
 
 	      subscribe.on('submit',function(e){
 	        var self = $(this);
-	        
+
 	        if(self.find('input[type="email"]').val() == ''){
-	          text = "Please enter your e-mail!";
+	          text = "Kérem adja meg az e-mail címét!";
 	          message.html('<div class="alert-box warning"><p>'+text+'</p></div>')
 	            .slideDown()
 	            .delay(4000)
@@ -442,7 +442,7 @@
 	          $.ajax({
 	            type: "POST",
 	            url: "bat/newsletter.php",
-	            data: self.serialize(), 
+	            data: self.serialize(),
 	            success: function(data){
 	              if(data == '1'){
 	                text = "Your email has been sent successfully!";
@@ -528,7 +528,7 @@
 			      resolution: 'standard_resolution',
 			      template: '<div class="nv-instafeed-item"><a href="{{image}}" title="{{location}}" data-fancybox="instagram"><img src="{{image}}" /></a></div>'
 			    });
-			      
+
 			    feed.run();
 
 	    	});
@@ -560,7 +560,7 @@
 				        });
 				    }
 			    });
-			      
+
 			    feed.run();
 
 	    	});
@@ -639,7 +639,7 @@
 		Facebook Feed
 		------------------------------------------------ */
 
-		
+
 
 		/* ---------------------------------------------------- */
 		/*	Countdown											*/
@@ -663,14 +663,14 @@
 				labels : ['years', 'month', 'weeks', 'days', 'hours', 'minutes', 'seconds']
 			});
 		});
-		
+
 		/* ---------------------------------------------------- */
         /*	Price Scale										    */
         /* ---------------------------------------------------- */
 
 		var slider;
 		if($('#price').length){
-			slider = $('#price').slider({ 
+			slider = $('#price').slider({
 		 		animate: true,
 				range: true,
 				values: [ 1, 99 ],
@@ -697,7 +697,7 @@
 		    $( "#amount" ).val( $( "#distance" ).slider( "value" ) + " km" );
 		    $( "#total" ).val( "Total: $ " +  $( "#distance" ).slider( "value" ) );
 		}
-		
+
 
 		/* ---------------------------------------------------- */
         /*	Accordion & Toggle									*/
@@ -841,9 +841,9 @@
 	        var $win = $('.wrapper-container'); // or $box parent container
 			var $box = $(".demo-sw");
 			var $sb = $(".btn-demo");
-			
-		 	$win.on("click.Bst", function(event){		
-				if ( 
+
+		 	$win.on("click.Bst", function(event){
+				if (
 	            $box.has(event.target).length == 0 //checks if descendants of $box was clicked
 	            &&
 	            !$box.is(event.target) //checks if the $box itself was clicked
@@ -853,7 +853,7 @@
 					$('.demo-sw').removeClass('open');;
 				}
 			});
-			  
+
 		});
 
 		/* ---------------------------------------------------- */
@@ -926,7 +926,7 @@
 		               map: map,
 		               icon: 'images/map_marker.png'
 		            });
-		            
+
 		            marker.setMap(map);
 
 		            //Zoom to 7 when clicked on marker
@@ -939,7 +939,7 @@
 				google.maps.event.addDomListener(window, 'load', loadMap);
 
 			});
-			
+
 		}
 
 		if ($('#googleMap2').length) {
@@ -969,7 +969,7 @@
 		               map: map,
 		               icon: 'images/map_marker.png'
 		            });
-		            
+
 		            marker.setMap(map);
 
 		            //Zoom to 7 when clicked on marker
@@ -982,7 +982,7 @@
 				google.maps.event.addDomListener(window, 'load', loadMap);
 
 			});
-			
+
 		}
 
 	});

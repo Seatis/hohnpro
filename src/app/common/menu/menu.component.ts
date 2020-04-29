@@ -18,7 +18,7 @@ export class HohnMenuComponent implements OnInit {
 
 export const hohnMenu: HohnMenu[] = [
   {label: 'Főoldal', url: '/', items: null},
-  {label: 'Hírek', url: '/', items: [
+  {label: 'Hírek', url: '/news', items: [
       {label: 'Archívum', url: '/'}
     ]},
   {label: 'Céljaim', url: '/', items: [

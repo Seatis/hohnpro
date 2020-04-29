@@ -1,0 +1,57 @@
+<div id="content" *ngIf="tokenService.loaded">
+
+  <!-- - - - - - - - - - - - - - Breadcrumbs - - - - - - - - - - - - - - - - -->
+
+  <div class="breadcrumbs-wrap with-bg2">
+
+    <div class="container">
+
+      <h1 class="page-title">Hírek</h1>
+
+      <ul class="breadcrumbs">
+
+        <li><a routerLink="/">Főoldal</a></li>
+        <li>Hírek</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <!-- - - - - - - - - - - - - end Breadcrumbs - - - - - - - - - - - - - - - -->
+
+  <div class="page-content-wrap">
+
+    <div class="container">
+
+      <div class="events-holder type-2">
+
+
+        <div *ngFor="let row of convertedNews" class="row">
+          <div *ngFor="let newsItem of row" class="col-md-6">
+            <div class="event-item">
+              <div class="entry-attachment">
+                <div *ngIf="!!newsItem.videoUrl; else noVideo" class="responsive-iframe">
+                  <iframe [src]="getSafeUrl(newsItem.videoUrl)"></iframe>
+                </div>
+                <ng-template #noVideo><img [src]="getSafeUrl(newsItem.kepMainUrl)" alt=""></ng-template>
+              </div>
+              <div class="event-info">
+                <h5 class="event-link"><span *ngIf="isNewsFeatured(newsItem.datum)" class="label">Kiemelt</span><a href="#">{{newsItem.cim}}</a></h5>
+                <div class="entry-meta">
+
+                  <time class="entry-date">{{newsItem.datum.toLocaleDateString()}}</time>
+                  <span class="entry-byline">Szerző: <a href="#">{{newsItem.szerzo}}</a></span>
+                  <span class="entry-cat">Kategória: <a href="#">{{newsItem.kategoria}}</a></span>
+                </div>
+                <p>{{newsItem.rovidLeiras}}</p>
+                <a href="#" class="info-btn">Tovább a hírre ...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,7 +10,7 @@
 
         <div class="entry-attachment">
 
-          <figure class="thumbnail-attachment"><img src="assets/images/news/201911041000.jpg" alt=""></figure>
+          <figure class="thumbnail-attachment"><img [src]="news1.kepMainUrl" alt=""></figure>
 
         </div>
 
@@ -22,13 +22,13 @@
 
           <h6>Legfrissebb hírek</h6>
 
-          <h4 class="entry-title"><a href="#">A vidékfejlesztés sikere a vidék sikeressége, vagy politikai befolyás?</a></h4>
+          <h4 class="entry-title"><a href="#">{{news1.cim}}</a></h4>
 
           <!-- - - - - - - - - - - - - - Entry Meta - - - - - - - - - - - - - - - - -->
 
           <div class="entry-meta">
 
-            <time class="entry-date" datetime="2019-11-04">2019. november 4.</time>
+            <time class="entry-date">{{news1.datum.toLocaleDateString()}}</time>
 
           </div>
 
@@ -36,7 +36,7 @@
 
           <!-- - - - - - - - - - - - - - Entry Excerpt - - - - - - - - - - - - - - - - -->
 
-          <a href="#" class="info-btn">Még több hír...</a>
+          <a href="#" class="info-btn">Tovább a hírre...</a>
 
           <!-- - - - - - - - - - - - - - End of Entry Excerpt - - - - - - - - - - - - - - - - -->
 
@@ -55,7 +55,7 @@
 
         <div class="entry-attachment">
 
-          <figure class="thumbnail-attachment"><img src="assets/images/news/20181130_kiemelt.jpg" alt=""></figure>
+          <figure class="thumbnail-attachment"><img [src]="news2.kepSecUrl" alt=""></figure>
 
         </div>
 
@@ -66,13 +66,13 @@
         <div class="entry-body">
 
 
-          <h5 class="entry-title"><a href="#">A családon belüli erőszak problémája</a></h5>
+          <h5 class="entry-title"><a href="#">{{news2.cim}}</a></h5>
 
           <!-- - - - - - - - - - - - - - Entry Meta - - - - - - - - - - - - - - - - -->
 
           <div class="entry-meta">
 
-            <time class="entry-date" datetime="2018-03-25">2019. november 4.</time>
+            <time class="entry-date">{{news2.datum.toLocaleDateString()}}</time>
 
           </div>
 
@@ -101,32 +101,34 @@
     </div>
     <div class="col-md-3">
 
-      <div class="widget-fb">
+<!--      <div class="widget-fb">-->
 
-        <header></header>
+<!--        <header></header>-->
 
-        <p>Baranya megyéről a "Magyar Falu Program" kapcsán beszéltem a Tisztelet Házban. Kérem tekintsék meg.</p>
+<!--        <p>Baranya megyéről a "Magyar Falu Program" kapcsán beszéltem a Tisztelet Házban. Kérem tekintsék meg.</p>-->
 
-        <!-- - - - - - - - - - - - - - Entry Meta - - - - - - - - - - - - - - - - -->
+<!--        &lt;!&ndash; - - - - - - - - - - - - - Entry Meta - - - - - - - - - - - - - - - - &ndash;&gt;-->
 
-        <div class="entry-meta">
+<!--        <div class="entry-meta">-->
 
-          <time class="entry-date" datetime="2019-11-09">2019. november 9.</time>
+<!--          <time class="entry-date" datetime="2019-11-09">2019. november 9.</time>-->
 
-        </div>
+<!--        </div>-->
 
-        <!-- - - - - - - - - - - - - - End of Meta - - - - - - - - - - - - - - - - -->
+<!--        &lt;!&ndash; - - - - - - - - - - - - - End of Meta - - - - - - - - - - - - - - - - &ndash;&gt;-->
 
-        <div class="slash-list">
-          <a href="#">Ugrás a posztra </a>
-          <a href="#">Megosztás </a>
-        </div>
+<!--        <div class="slash-list">-->
+<!--          <a href="#">Ugrás a posztra </a>-->
+<!--          <a href="#">Megosztás </a>-->
+<!--        </div>-->
 
-        <a href="#" class="info-btn">Kövessen a Facebookon</a>
-
-      </div>
+<!--        <a href="#" class="info-btn">Kövessen a Facebookon</a>-->
+<!--      </div>-->
+      <div  class="fb-page" data-href="https://www.facebook.com/hohnkrisztina/" data-tabs="timeline" data-width="" data-height="374" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/hohnkrisztina/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/hohnkrisztina/">Hohn Krisztina</a></blockquote></div>
 
     </div>
+
+
   </div>
   <div class="row flex-row">
     <div class="col-md-4">
@@ -196,11 +198,11 @@
 
         <div class="responsive-iframe">
 
-          <iframe src="https://www.youtube.com/embed/MR0mREbEpMY"></iframe>
+          <iframe [src]="videoUrl"></iframe>
 
         </div>
 
-        <a href="#" class="info-btn">Összes videó megtekintése</a>
+        <a href="https://www.youtube.com/channel/UCiZxXJriE8eP485Ut9AdAxA" class="info-btn">Összes videó megtekintése</a>
 
       </div>
 
