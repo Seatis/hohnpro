@@ -3,6 +3,7 @@ import {HeaderService} from '../service/header.service';
 import {TokenService} from '../service/token.service';
 import {Events} from '../common/calendar/events.mock';
 import {Event} from '../common/calendar/model/event.model';
+import {HohnUtil} from '../common/hohn.util';
 
 @Component({
   selector: 'app-abouthohn',
@@ -12,6 +13,8 @@ import {Event} from '../common/calendar/model/event.model';
 export class AbouthohnComponent implements OnInit {
 
   public events: Event[] = Events;
+  public facebookUrl: string = HohnUtil.getFacebookUrl();
+  public instaUrl: string = HohnUtil.getInstaUrl();
 
   constructor(
     private headerService: HeaderService,

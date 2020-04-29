@@ -13,6 +13,10 @@ export class SystemService {
     return newsData;
   }
 
+  public getNewsById(id: number): News {
+    return newsData.filter( (item: News) => item.id === id).length ? newsData.filter( (item: News) => item.id === id)[0] : null;
+  }
+
 
 }
 

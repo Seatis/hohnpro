@@ -6,13 +6,17 @@ import {APP_BASE_HREF} from '@angular/common';
 import {IndexComponent} from './index/index.component'
 import { AbouthohnComponent } from './abouthohn/abouthohn.component';
 import {NewsComponent} from './news/news.component';
+import {NewsitemComponent} from './news/newsitem/newsitem.component';
 
 const APP_ROUTING : Routes = [
   // {path: '', redirectTo: 'home', pathMatch: 'full'},
   // {path: 'home', component: OrderscreenComponent},
   {path: '', component: IndexComponent},
   {path: 'about', component: AbouthohnComponent, runGuardsAndResolvers: 'always'},
-  {path: 'news', component: NewsComponent, runGuardsAndResolvers: 'always'},
+  {path: 'news', runGuardsAndResolvers: 'always', children: [
+      {path: '', component: NewsComponent, runGuardsAndResolvers: 'always'},
+      {path: 'content/:id', component: NewsitemComponent, runGuardsAndResolvers: 'always'}
+    ]},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

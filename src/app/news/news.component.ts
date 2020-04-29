@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {HeaderService} from '../service/header.service';
 import {TokenService} from '../service/token.service';
 import {News} from './model/news.model';
-import {newsData} from './news.data';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {SystemService} from '../service/system.service';
 
@@ -48,7 +47,6 @@ export class NewsComponent implements OnInit {
     this.news.sort(function(a,b){
       return new Date(b.datum).getTime() - new Date(a.datum).getTime();
     }).forEach( (item: News, index: number) => {
-      console.log(index);
       row.push(item);
       if (index === 1 || (index > 2 && index % 3 === 0)) {
         this.convertedNews.push(row);

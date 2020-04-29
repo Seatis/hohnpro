@@ -6,3 +6,7 @@
 >>> div.owl-item.active td.link {
   background-color: #edf213;
 }
+
+.wt-title {
+  color: black !important;
+}

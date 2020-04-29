@@ -22,7 +22,7 @@
 
           <h6>Legfrissebb hírek</h6>
 
-          <h4 class="entry-title"><a href="#">{{news1.cim}}</a></h4>
+          <h4 class="entry-title"><a routerLink="/news/content/{{news1.id}}">{{news1.cim}}</a></h4>
 
           <!-- - - - - - - - - - - - - - Entry Meta - - - - - - - - - - - - - - - - -->
 
@@ -36,7 +36,7 @@
 
           <!-- - - - - - - - - - - - - - Entry Excerpt - - - - - - - - - - - - - - - - -->
 
-          <a href="#" class="info-btn">Tovább a hírre...</a>
+          <a routerLink="/news/content/{{news1.id}}" class="info-btn">Tovább a hírre...</a>
 
           <!-- - - - - - - - - - - - - - End of Entry Excerpt - - - - - - - - - - - - - - - - -->
 
@@ -66,7 +66,7 @@
         <div class="entry-body">
 
 
-          <h5 class="entry-title"><a href="#">{{news2.cim}}</a></h5>
+          <h5 class="entry-title"><a routerLink="/news/content/{{news2.id}}">{{news2.cim}}</a></h5>
 
           <!-- - - - - - - - - - - - - - Entry Meta - - - - - - - - - - - - - - - - -->
 
@@ -80,7 +80,7 @@
 
           <!-- - - - - - - - - - - - - - Entry Excerpt - - - - - - - - - - - - - - - - -->
 
-          <a href="#" class="info-btn">Tovább a hírre...</a>
+          <a routerLink="/news/content/{{news2.id}}" class="info-btn">Tovább a hírre...</a>
 
           <!-- - - - - - - - - - - - - - End of Entry Excerpt - - - - - - - - - - - - - - - - -->
 

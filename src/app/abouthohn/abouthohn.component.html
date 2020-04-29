@@ -69,11 +69,11 @@
             <span class="share-title">Megosztás:</span>
             <ul class="social-icons share">
 
-              <li><a href="#" class="sh-facebook"><i class="icon-facebook"></i>Facebook</a></li>
-              <li><a href="#" class="sh-twitter"><i class="icon-twitter"></i>Twitter</a></li>
-              <li><a href="#" class="sh-google"><i class="icon-gplus-3"></i>Instagram</a></li>
-              <li><a href="#" class="sh-pinterest"><i class="icon-pinterest"></i>Pinterest</a></li>
-              <li><a href="#" class="sh-mail"><i class="icon-mail"></i>Email</a></li>
+              <li><a href="{{facebookUrl}}" class="sh-facebook"><i class="icon-facebook"></i>Facebook</a></li>
+<!--              <li><a href="#" class="sh-twitter"><i class="icon-twitter"></i>Twitter</a></li>-->
+              <li><a href="{{instaUrl}}" class="sh-google"><i class="icon-gplus-3"></i>Instagram</a></li>
+<!--              <li><a href="#" class="sh-pinterest"><i class="icon-pinterest"></i>Pinterest</a></li>-->
+<!--              <li><a href="#" class="sh-mail"><i class="icon-mail"></i>Email</a></li>-->
 
             </ul>
 
@@ -106,7 +106,9 @@
 
           <!-- widget -->
 
-          <hohn-calendar [events]="events"></hohn-calendar>
+          <div class="widget widget-holder">
+            <hohn-calendar [events]="events"></hohn-calendar>
+          </div>
 
 
 
@@ -114,11 +116,13 @@
 
 <!--          //lightwidget.com/widgets/d055906209ea577e878e7653d2cab7b4.html-->
 <!--          //lightwidget.com/widgets/6883079ffee25ee2bdd46884b3fe7096.html-->
-          <hohn-instafeed
-            feedUrl="//lightwidget.com/widgets/244837776d05523ea44f01cb31564932.html"
-            targetUrl="https://www.instagram.com/"
-            >
-          </hohn-instafeed>
+
+            <hohn-instafeed
+              feedUrl="//lightwidget.com/widgets/244837776d05523ea44f01cb31564932.html"
+              targetUrl="https://www.instagram.com/"
+              >
+            </hohn-instafeed>
+
           <!-- LightWidget WIDGET -->
           <!-- <iframe src="//lightwidget.com/widgets/11f2c3cc3c93585194ab9fc96e9d576a.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe> -->
           <!-- <iframe src="//lightwidget.com/widgets/c1714bf6f1f15639a7d79670df9baed0.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe> -->

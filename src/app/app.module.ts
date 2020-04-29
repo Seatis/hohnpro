@@ -30,6 +30,7 @@ import {SystemService} from './service/system.service';
 import {NewsletterService} from './common/newsletter/service/newsletter.service';
 import {MessageService} from 'primeng/api';
 import {ToastModule} from 'primeng/toast';
+import {NewsitemComponent} from './news/newsitem/newsitem.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {ToastModule} from 'primeng/toast';
     ActionComponent,
     CarouselComponent,
     NewsMainComponent,
-    NewsComponent
+    NewsComponent,
+    NewsitemComponent
   ],
   imports: [
     BrowserModule,

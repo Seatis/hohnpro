@@ -7,9 +7,10 @@
     <div class="item-carousel" *ngFor="let item of carouselMock">
       <div class="issue-item">
         <figure><a [href]="item.url"><img [src]="item.img" alt=""></a></figure>
-        <h5><a href="#">{{item.title}}</a></h5>
+<!--        <h5><a href="#">{{item.title}}</a></h5>-->
+        <h5>{{item.title}}</h5>
         <p>{{item.description}}</p>
-        <a [href]="item.url" class="info-btn">További információ</a>
+<!--        <a [href]="item.url" class="info-btn">További információ</a>-->
       </div>
     </div>
 

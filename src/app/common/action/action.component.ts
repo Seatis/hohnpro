@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {HohnUtil} from '../hohn.util';
 
 @Component({
   selector: 'hohn-action',
@@ -7,6 +8,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ActionComponent implements OnInit {
 
+  public facebookUrl: string = HohnUtil.getFacebookUrl();
+  public youtubeChannelUrl: string = HohnUtil.getYoutubeChannelUrl();
 
   constructor() { }
 

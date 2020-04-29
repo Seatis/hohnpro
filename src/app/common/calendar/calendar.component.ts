@@ -22,7 +22,7 @@ export class CalendarComponent implements OnInit {
   public ngOnInit(): void {
     const now: Date = new Date();
     this.calendarDataList.push({date: now, monthData: this.config(now)});
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 8; i++) {
       this.calendarDataList.push({
         date: this.determinateNextMonthDate(this.calendarDataList[this.calendarDataList.length - 1].date),
         monthData: this.config(this.determinateNextMonthDate(this.calendarDataList[this.calendarDataList.length - 1].date))

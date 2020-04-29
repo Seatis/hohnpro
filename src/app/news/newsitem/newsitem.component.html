@@ -1,0 +1,103 @@
+<div id="content" *ngIf="tokenService.loaded">
+
+  <!-- - - - - - - - - - - - - - Breadcrumbs - - - - - - - - - - - - - - - - -->
+
+  <div class="breadcrumbs-wrap with-bg">
+
+    <div class="container">
+      <h1 class="page-title">{{news.cim}}</h1>
+      <ul class="breadcrumbs">
+
+        <li><a routerLink="/">Főoldal</a></li>
+        <li><a routerLink="/news">Hírek</a></li>
+        <li>{{news.cim}}</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <!-- - - - - - - - - - - - - end Breadcrumbs - - - - - - - - - - - - - - - -->
+
+  <div class="page-content-wrap">
+
+    <div class="container">
+
+      <div class="row">
+        <main id="main" class="col-md-8 col-sm-12">
+
+          <div class="event-item single-event">
+
+<!--            <h4 class="event-link">{{news.cim}}</h4>-->
+            <div class="entry-attachment">
+
+              <div *ngIf="!!news.videoUrl; else noVideo" class="responsive-iframe">
+                <iframe [src]="getSafeUrl(news.videoUrl)"></iframe>
+              </div>
+              <ng-template #noVideo><img [src]="getSafeUrl(news.kepMainUrl)" alt=""></ng-template>
+
+            </div>
+            <div class="event-info">
+              <div class="entry-meta">
+
+                <time class="entry-date">{{news.datum.toLocaleDateString()}}</time>
+                <span class="entry-byline">Szerző: <a href="#">{{news.szerzo}}</a></span>
+                <span class="entry-cat">Kategória: <a href="#">{{news.kategoria}}</a></span>
+
+              </div>
+              <div [innerHTML]="news.htmlContent"></div>
+            </div>
+
+          </div>
+
+          <div class="content-element2">
+
+            <div class="entries-nav">
+              <div class="row">
+                <div class="col-xs-6">
+                  <div *ngIf="!!previousNews">
+                    <a routerLink="/news/content/{{previousNews.id}}" class="info-btn prev-btn">Előző hír</a>
+                    <h6><a routerLink="/news/content/{{previousNews.id}}"><b>{{previousNews.cim}}</b></a></h6>
+                  </div>
+                </div>
+                <div class="col-xs-6">
+
+                  <div *ngIf="!!nextNews" class="align-right">
+                    <a routerLink="/news/content/{{nextNews.id}}" class="info-btn next-btn">Következő hír</a>
+                    <h6><a routerLink="/news/content/{{nextNews.id}}"><b>{{nextNews.cim}}</b></a></h6>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </main>
+        <aside id="sidebar" class="col-md-4 col-sm-12">
+
+
+
+          <!-- widget -->
+          <div class="widget widget-holder">
+            <hohn-calendar [events]="events"></hohn-calendar>
+          </div>
+          <!-- widget -->
+
+
+          <div class="widget widget-holder">
+
+            <div  class="fb-page" data-href="https://www.facebook.com/hohnkrisztina/" data-tabs="timeline" data-width="360" data-height="374" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/hohnkrisztina/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/hohnkrisztina/">Hohn Krisztina</a></blockquote></div>
+
+
+          </div>
+
+        </aside>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
