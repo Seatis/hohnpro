@@ -1,0 +1,74 @@
+<div id="content" *ngIf="tokenService.loaded">
+
+  <div class="breadcrumbs-wrap with-bg">
+
+    <div class="container">
+
+      <h1 class="page-title">Eseménynaptár - 2020</h1>
+
+      <ul class="breadcrumbs">
+
+        <li><a routerLink="/">Főoldal</a></li>
+        <li>Eseménynaptár</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="page-content-wrap2 no-top-space">
+
+    <div class="container">
+
+      <div class="content-element">
+
+        <div *ngIf="!eventList.length; else noEvent" class="content-element4">
+
+          <h3>Nem várható esemény a közeljövőben ...</h3>
+
+        </div>
+
+        <ng-template #noEvent>
+          <div class="events-holder">
+
+            <div *ngFor="let event of eventList" class="event-item">
+
+              <div class="row">
+                <div class="col-md-4">
+
+                  <div class="event-img">
+                    <img [src]="event.kepUrl" alt="">
+                  </div>
+
+                </div>
+                <div class="col-md-8">
+
+                  <div class="event-info">
+
+                    <div class="event-header clearfix">
+                      <h5 class="event-link f-left"><b>{{event.cim}}</b></h5>
+                      <!--                    <h6 class="event-price f-right"><b>$15</b></h6>-->
+                    </div>
+                    <div class="event-desc">
+                      <time datetime="2018-07-25">{{event.datum.toLocaleDateString()}}</time> &nbsp; |  &nbsp; {{event.idopont}} <br>
+                      {{event.hely}}
+                    </div>
+                    <div [innerHTML]="event.htmlContent"></div>
+                    <!--                  <a href="#" class="info-btn">Find Out More</a>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

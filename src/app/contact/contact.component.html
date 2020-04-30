@@ -1,0 +1,88 @@
+<div id="content" *ngIf="tokenService.loaded">
+
+  <!-- - - - - - - - - - - - - - Breadcrumbs - - - - - - - - - - - - - - - - -->
+
+  <div class="breadcrumbs-wrap with-bg">
+
+    <div class="container">
+
+      <h1 class="page-title">Elérhetőségek</h1>
+
+      <ul class="breadcrumbs">
+
+        <li><a routerLink="/">Főoldal</a></li>
+        <li>Elérhetőségek</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <!-- - - - - - - - - - - - - end Breadcrumbs - - - - - - - - - - - - - - - -->
+
+  <div class="page-content-wrap">
+
+    <div class="container">
+
+      <div class="row">
+        <main id="main" class="col-md-8 col-sm-12">
+
+          <div class="content-element7">
+
+<!--            <h3>Elérhetőségek</h3>-->
+            <!-- Google map -->
+            <div class="map-section">
+
+<!--              <div id="googleMap" class="map-container"></div>-->
+              <div class="mapouter">
+                <div class="gmap_canvas">
+                  <iframe width="690" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Sz%C3%A9chenyi%20rkp.%2019.%20Budapest%201358&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+              </div>
+              <div class="row hohn-contact">
+                <div class="col-sm-6">
+                  <p><b>Hohn Krisztina országgyűlési képviselő</b></p>
+                  <p><b>1358 Budapest Széchenyi rkp. 19.</b></p>
+                </div>
+                <div class="col-sm-6">
+                  <p><b>Telefon: (+36) 1 / 782 7120 (10-16 óráig)</b></p>
+                  <p><b>E-mail:  info@hohn.hu</b></p>
+                </div>
+              </div>
+              <div class="row hohn-contact">
+                <div class="col-sm-6">
+                  <p><b>Képviselői tanácsadó: Horváth István</b></p>
+                </div>
+                <div class="col-sm-6">
+                  <p><b>E-mail: horvath.istvan@ujkezdet.hu</b></p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </main>
+        <aside id="sidebar" class="col-md-4 col-sm-12">
+
+          <!-- widget -->
+          <div class="widget widget-holder">
+            <hohn-eventfeed></hohn-eventfeed>
+          </div>
+          <div class="widget widget-holder">
+
+            <div  class="fb-page" data-href="https://www.facebook.com/hohnkrisztina/" data-tabs="timeline" data-width="360" data-height="374" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/hohnkrisztina/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/hohnkrisztina/">Hohn Krisztina</a></blockquote></div>
+
+
+          </div>
+
+        </aside>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

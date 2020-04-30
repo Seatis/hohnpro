@@ -1,0 +1,27 @@
+<div class="widget-events">
+
+  <h6 class="event-title">Közelgő események</h6>
+
+  <div *ngIf="eventList.length; else noFeedEvent">
+    <div *ngFor="let event of eventList" class="event-item">
+      <div class="event-date">
+        <div class="event-month">{{monthSortList[event.datum.getMonth()]}}</div>
+        <div class="event-day">{{event.datum.getDate()}}</div>
+      </div>
+      <div class="event-info">
+        <h6 class="event-link"><a href="" routerLink="/event">{{event.cim}}</a></h6>
+        <div class="event-info-item"><i class="icon icon-location"></i>{{event.hely}}</div>
+        <div class="event-info-item"><i class="icon icon-clock"></i>{{event.idopont}}</div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noFeedEvent>
+    <div class="event-item">
+      <h5>Nem várható esemény a közeljövőben ...</h5>
+    </div>
+
+  </ng-template>
+  <a href="" routerLink="/event" class="info-btn">További események</a>
+
+</div>
+<!--<hohn-calendar></hohn-calendar>-->

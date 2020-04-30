@@ -1,6 +1,10 @@
 export interface Event {
-  id?: number;
-  date: Date;
-  title: string;
+  id: number;
+  datum: Date;
+  cim: string;
   url: string;
+  idopont: string;
+  hely: string;
+  kepUrl: string;
+  htmlContent: string;
 }

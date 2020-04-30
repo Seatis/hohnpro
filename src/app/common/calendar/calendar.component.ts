@@ -42,13 +42,13 @@ export class CalendarComponent implements OnInit {
                 let tooltipTmp: string = null;
                 this.events.forEach( (event: Event) => {
                     if (
-                      event.date.getFullYear() === currentDate.getFullYear() &&
-                      event.date.getMonth() === currentDate.getMonth() &&
-                      event.date.getDate() === day
+                      event.datum.getFullYear() === currentDate.getFullYear() &&
+                      event.datum.getMonth() === currentDate.getMonth() &&
+                      event.datum.getDate() === day
                     ) {
-                        dateTmp = event.date;
+                        dateTmp = event.datum;
                         urlTmp = event.url;
-                        tooltipTmp = event.title;
+                        tooltipTmp = event.cim;
                     }
                 });
                 calendarDataRow.push(<CalendarEvent>{

@@ -1,0 +1,16 @@
+.mapouter{
+  position:relative;
+  text-align:right;
+  height:auto;
+  max-width:690px;
+}
+
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:500px;width:690px;
+}
+
+.hohn-contact {
+  padding-top: 20px;
+}

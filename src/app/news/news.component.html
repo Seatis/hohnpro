@@ -42,8 +42,8 @@
                 <div class="entry-meta">
 
                   <time class="entry-date">{{newsItem.datum.toLocaleDateString()}}</time>
-                  <span class="entry-byline">Szerző: <a href="#">{{newsItem.szerzo}}</a></span>
-                  <span class="entry-cat">Kategória: <a href="#">{{newsItem.kategoria}}</a></span>
+                  <span class="entry-byline">Szerző: <a routerLink="/about">{{newsItem.szerzo}}</a></span>
+                  <span class="entry-cat">Kategória: {{newsItem.kategoria}}</span>
                 </div>
                 <p>{{newsItem.rovidLeiras}}</p>
                 <a routerLink="/news/content/{{newsItem.id}}" class="info-btn">Tovább a hírre ...</a>

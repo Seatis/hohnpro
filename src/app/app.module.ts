@@ -31,6 +31,10 @@ import {NewsletterService} from './common/newsletter/service/newsletter.service'
 import {MessageService} from 'primeng/api';
 import {ToastModule} from 'primeng/toast';
 import {NewsitemComponent} from './news/newsitem/newsitem.component';
+import {EventComponent} from './event/event.component';
+import {EventfeedComponent} from './common/eventfeed/eventfeed.component';
+import {SupportComponent} from './common/support/support.component';
+import {ContactComponent} from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import {NewsitemComponent} from './news/newsitem/newsitem.component';
     CarouselComponent,
     NewsMainComponent,
     NewsComponent,
-    NewsitemComponent
+    NewsitemComponent,
+    EventComponent,
+    EventfeedComponent,
+    SupportComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

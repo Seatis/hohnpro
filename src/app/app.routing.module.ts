@@ -7,6 +7,8 @@ import {IndexComponent} from './index/index.component'
 import { AbouthohnComponent } from './abouthohn/abouthohn.component';
 import {NewsComponent} from './news/news.component';
 import {NewsitemComponent} from './news/newsitem/newsitem.component';
+import {EventComponent} from './event/event.component';
+import {ContactComponent} from './contact/contact.component';
 
 const APP_ROUTING : Routes = [
   // {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -17,12 +19,14 @@ const APP_ROUTING : Routes = [
       {path: '', component: NewsComponent, runGuardsAndResolvers: 'always'},
       {path: 'content/:id', component: NewsitemComponent, runGuardsAndResolvers: 'always'}
     ]},
+  {path: 'event', component: EventComponent, runGuardsAndResolvers: 'always'},
+  {path: 'contact', component: ContactComponent, runGuardsAndResolvers: 'always'},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forRoot(APP_ROUTING, {onSameUrlNavigation: 'reload'}),
+  imports: [RouterModule.forRoot(APP_ROUTING, {onSameUrlNavigation: 'reload', anchorScrolling: 'enabled'}),
     RouterModule.forChild(APP_ROUTING),
     FormsModule,
     CommonModule]

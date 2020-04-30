@@ -1,0 +1,56 @@
+<div *ngIf="supportList.length" class="page-section">
+  <div class="container">
+
+    <h2 class="section-title align-center">Ezért támogatom Hohn Krisztinát</h2>
+
+    <!-- - - - - - - - - - - - - Owl-Carousel - - - - - - - - - - - - - - - -->
+
+    <div class="carousel-type-1">
+
+      <div class="owl-carousel content-element2" data-max-items="1" data-autoplay="true">
+
+        <!-- Slide -->
+        <div *ngFor="let support of supportList" class="item-carousel">
+          <!-- Carousel Item -->
+          <!-- - - - - - - - - - - - - - Testimonial - - - - - - - - - - - - - - - - -->
+          <div class="testimonial testimonial-single">
+
+            <div class="author-box">
+
+<!--              <a href="#" class="avatar">-->
+                <img [src]="support.kepUrl" alt="">
+<!--              </a>-->
+
+            </div>
+
+            <div class="testimonial-holder">
+
+              <blockquote [innerHTML]="support.htmlContent">
+              </blockquote>
+
+              <div class="author-info">
+
+                <h6 class="author-name">{{support.nev}}</h6>
+                <span class="author-position">{{support.titulus}}</span>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!-- /Carousel Item -->
+        </div>
+        <!-- /Slide -->
+
+
+
+      </div>
+
+      <!--            <div class="align-center">-->
+      <!--              <a href="#" class="btn">Mondja el Ön is véleményét</a>-->
+      <!--            </div>-->
+
+    </div>
+
+  </div>
+</div>
