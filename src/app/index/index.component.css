@@ -1,9 +1,21 @@
 .hohnimg {
   background-image: url(assets/images/1920x1050_bg1.png);
+  background-size: cover;
 }
 
 @media screen and (max-width: 1366px) {
   .intro h1 {
     font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hohnimg {
+    background-image: url(assets/images/bg/hohn_bg_mobile.jpg);
+    background-size: cover;
+  }
+  .intro h1 {
+    font-size: 36px;
+    text-align: left;
   }
 }
