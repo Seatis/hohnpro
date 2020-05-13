@@ -11,7 +11,7 @@ export const supportMock: Support[] = [
   {
     id: 2,
     nev: 'Halász Pálma',
-    titulus: '',
+    titulus: 'Pedagógus, HR menedzser',
     kepUrl: 'assets/images/support/halasz_palma_263x263.jpg',
     htmlContent: `<p>Köszönet Hohn Kriszta országgyűlési képviselő asszonynak azért a munkájáért, amit azért tesz, hogy a legkiszolgáltatottabb réteg érdekeit védje, hangot adjon azoknak, akiknek a hangját egyébként nem hallaná meg senki! A sajnálat kevés, tettekre van szükség! Én ezért támogatom Őt!</p>`
   }

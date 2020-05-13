@@ -8,7 +8,7 @@ import {TokenService} from '../service/token.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  
+
   constructor(private headerService: HeaderService, public tokenService: TokenService) {
 
   }
