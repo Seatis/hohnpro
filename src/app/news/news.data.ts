@@ -112,7 +112,7 @@ export const newsData: News[] = [
   },
   {
     id: 9,
-    cim: 'Hogy-hogy, maguknak ilyenkor, amikor járvány van, ez jár az eszükben?',
+    cim: 'Maguknak ilyenkor ez jár az eszükben?',
     datum: new Date('2020-05-05T10:00:00'),
     htmlContent: `<p>"Hogy-hogy, maguknak ilyenkor, amikor járvány van, ez jár az eszükben?"<br />
                   Kérdezte a parlamentben Hohn Krisztina (LMP-UK) baranyai országgyűlési képviselő.</p>

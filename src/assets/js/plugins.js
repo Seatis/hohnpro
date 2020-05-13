@@ -49,7 +49,7 @@
 
 			// counters
 			if($('.counter').length) base.counters();
-			
+
 			// responsive menu
 			if($('#header').length) base.navInit.init(this);
 
@@ -169,9 +169,9 @@
 				        var $win = $('.wrapper-container'); // or $box parent container
 						var $box = $(".searchform-wrap");
 						var $sb = $(".search-button");
-						
-					 	$win.on("click.Bst", function(event){		
-							if ( 
+
+					 	$win.on("click.Bst", function(event){
+							if (
 				            $box.has(event.target).length === 0 //checks if descendants of $box was clicked
 				            &&
 				            !$box.is(event.target) //checks if the $box itself was clicked
@@ -185,7 +185,7 @@
 						$('.close-search-form').on( "click", function() {
 						  $('.searchform-wrap').removeClass('opened');
 						});
-						  
+
 					});
 				},
 				display_show: function (e) {
@@ -299,7 +299,7 @@
 							dropdown = invoker.next('.dropdown-window');
 
 						self.smartPosition(dropdown);
-						
+
 						invoker.add(dropdown).toggleClass('opened');
 						dropdown.parent().toggleClass('dropdown-over');
 
@@ -433,11 +433,11 @@
 					if($(this).scrollTop() >= offset){
 
 						$this.addClass('counted');
-						
+
 						(function ($) {
 							$.fn.countTo = function (options) {
 								options = options || {};
-								
+
 								return $(this).each(function () {
 									// set options for current element
 									var settings = $.extend({}, $.fn.countTo.defaults, {
@@ -447,58 +447,58 @@
 										refreshInterval: $(this).data('refresh-interval'),
 										decimals:        $(this).data('decimals')
 									}, options);
-									
+
 									// how many times to update the value, and how much to increment the value on each update
 									var loops = Math.ceil(settings.speed / settings.refreshInterval),
 										increment = (settings.to - settings.from) / loops;
-									
+
 									// references & variables that will change with each update
 									var self = this,
 										$self = $(this),
 										loopCount = 0,
 										value = settings.from,
 										data = $self.data('countTo') || {};
-									
+
 									$self.data('countTo', data);
-									
+
 									// if an existing interval can be found, clear it first
 									if (data.interval) {
 										clearInterval(data.interval);
 									}
 									data.interval = setInterval(updateTimer, settings.refreshInterval);
-									
+
 									// initialize the element with the starting value
 									render(value);
-									
+
 									function updateTimer() {
 										value += increment;
 										loopCount++;
-										
+
 										render(value);
-										
+
 										if (typeof(settings.onUpdate) == 'function') {
 											settings.onUpdate.call(self, value);
 										}
-										
+
 										if (loopCount >= loops) {
 											// remove the interval
 											$self.removeData('countTo');
 											clearInterval(data.interval);
 											value = settings.to;
-											
+
 											if (typeof(settings.onComplete) == 'function') {
 												settings.onComplete.call(self, value);
 											}
 										}
 									}
-									
+
 									function render(value) {
 										var formattedValue = settings.formatter.call(self, value, settings);
 										$self.html(formattedValue);
 									}
 								});
 							};
-							
+
 							$.fn.countTo.defaults = {
 								from: 0,               // the number the element should start at
 								to: 0,                 // the number the element should end at
@@ -509,7 +509,7 @@
 								onUpdate: null,        // callback method for every time the element is updated
 								onComplete: null       // callback method for when the element finishes updating
 							};
-							
+
 							function formatter(value, settings) {
 								return value.toFixed(settings.decimals);
 							}
@@ -522,17 +522,17 @@
 							  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, '');
 							}
 						  });
-						  
+
 						  // start all the timers
-						  $('.timer').each(count);  
-						  
+						  $('.timer').each(count);
+
 						  function count(options) {
 							var $this = $(this);
 							options = $.extend({}, options || {}, $this.data('countToOptions') || {});
 							$this.countTo(options);
 						  }
 						});
-						
+
 					}
 
 				});
@@ -599,7 +599,7 @@
 						$this.trigger('next.owl.carousel');
 					});
 
-					// // drag 
+					// // drag
 					$this.on('dragged.owl.carousel', function(e){
 
 				        if(e.relatedTarget.state.direction == 'left'){
@@ -608,7 +608,7 @@
 				        else{
 				            sync.trigger('prev.owl.carousel');
 				        }
-				        
+
 					});
 
 					sync.on('dragged.owl.carousel', function(e){
@@ -783,7 +783,7 @@
 				this.navHide = $('<a></a>', {
 					id: 'advanced-menu-hide',
 					'href' : '#'
-				}).insertBefore(this.navMobile); 
+				}).insertBefore(this.navMobile);
 
 			},
 
@@ -809,7 +809,7 @@ $.fn.madCustomSelect = function () {
 		var list = $(this).children('ul'),
 			select = $(this).find('select'),
 			title = $(this).find('.select-title');
-	 
+
 
 		// select items to list items
 
@@ -826,7 +826,7 @@ $.fn.madCustomSelect = function () {
 		select.hide();
 
 		// open list
-		
+
 		title.on('click',function(){
 			list.slideToggle(400);
 			$(this).toggleClass('active');
@@ -872,15 +872,15 @@ $.fn.madCustomSelect = function () {
 			if (base.options.sticky) {
 				base.sticky.stickySet.call(base, base.window);
 				base.stickyWrap.before($(".sticky-header").clone().addClass("clone-fixed"));
-				
+
 				$( window ).on('load', function() {
 
 				  	$(".sticky-header.clone-fixed").css('top', '-' + $('#header').outerHeight() + 'px');
-				     
+
 				});
-				
+
 			}
-			
+
 			// Scroll Event
 			base.window.on('scroll', function (e) {
 				if (base.options.sticky) {
@@ -903,7 +903,7 @@ $.fn.madCustomSelect = function () {
 						offset: offset,
 						height: stickyWrap.outerHeight(true)
 					});
-					 
+
 				}
 			},
 			stickyInit: function (win) {
@@ -962,8 +962,8 @@ $.fn.madCustomSelect = function () {
 		    if( $(window).scrollTop() > 0 )
 		{
 		        $('.sticky-holder').css({display: 'block'});
-		} 
-		else 
+		}
+		else
 		{
 		        $('.sticky-holder').css({display: 'none'});
 		}
@@ -1288,48 +1288,49 @@ Version: 		0.1
 			 * Mouse wheel handler.
 			 * @param {Object} event
 			 */
+			// TODO én vettem ki 2020. 05. 13. élesítés előtt
 			function wheel(event) {
 
-				if (!initDone) {
-					init();
-				}
-
-				var target = event.target;
-				var overflowing = overflowingAncestor(target);
-
-				// use default if there's no overflowing
-				// element or default action is prevented
-				if (!overflowing || event.defaultPrevented ||
-					isNodeName(activeElement, "embed") ||
-				   (isNodeName(target, "embed") && /\.pdf/i.test(target.src))) {
-					return true;
-				}
-
-				var deltaX = event.wheelDeltaX || 0;
-				var deltaY = event.wheelDeltaY || 0;
-
-				// use wheelDelta if deltaX/Y is not available
-				if (!deltaX && !deltaY) {
-					deltaY = event.wheelDelta || 0;
-				}
-
-				// check if it's a touchpad scroll that should be ignored
-				if (!options.touchpadSupport && isTouchpad(deltaY)) {
-					return true;
-				}
-
-				// scale by step size
-				// delta is 120 most of the time
-				// synaptics seems to send 1 sometimes
-				if (Math.abs(deltaX) > 1.2) {
-					deltaX *= options.stepSize / 120;
-				}
-				if (Math.abs(deltaY) > 1.2) {
-					deltaY *= options.stepSize / 120;
-				}
-
-				scrollArray(overflowing, -deltaX, -deltaY);
-				event.preventDefault();
+				// if (!initDone) {
+				// 	init();
+				// }
+        //
+				// var target = event.target;
+				// var overflowing = overflowingAncestor(target);
+        //
+				// // use default if there's no overflowing
+				// // element or default action is prevented
+				// if (!overflowing || event.defaultPrevented ||
+				// 	isNodeName(activeElement, "embed") ||
+				//    (isNodeName(target, "embed") && /\.pdf/i.test(target.src))) {
+				// 	return true;
+				// }
+        //
+				// var deltaX = event.wheelDeltaX || 0;
+				// var deltaY = event.wheelDeltaY || 0;
+        //
+				// // use wheelDelta if deltaX/Y is not available
+				// if (!deltaX && !deltaY) {
+				// 	deltaY = event.wheelDelta || 0;
+				// }
+        //
+				// // check if it's a touchpad scroll that should be ignored
+				// if (!options.touchpadSupport && isTouchpad(deltaY)) {
+				// 	return true;
+				// }
+        //
+				// // scale by step size
+				// // delta is 120 most of the time
+				// // synaptics seems to send 1 sometimes
+				// if (Math.abs(deltaX) > 1.2) {
+				// 	deltaX *= options.stepSize / 120;
+				// }
+				// if (Math.abs(deltaY) > 1.2) {
+				// 	deltaY *= options.stepSize / 120;
+				// }
+        //
+				// scrollArray(overflowing, -deltaX, -deltaY);
+				// event.preventDefault();
 			}
 
 			/**
