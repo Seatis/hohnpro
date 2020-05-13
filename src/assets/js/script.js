@@ -256,6 +256,8 @@
 
 				var item_dots = $(this).data('dots');
 
+				var autoplay_timeout = !!$(this).data('autoplay-timeout') ? $(this).data('autoplay-timeout') : 3000;
+
 				/* Install Owl Carousel */
 				$(this).owlCarousel({
 				    smartSpeed : 450,
@@ -263,7 +265,7 @@
 				    loop  : true,
 				    autoplay : autoplay_carousel,
 				    center: center_carousel,
-				    autoplayTimeout: 3000,
+				    autoplayTimeout: autoplay_timeout,
 				    navText : false,
 				    margin: item_margin,
 				    lazyLoad: true,

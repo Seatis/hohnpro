@@ -48,13 +48,10 @@ export class NewsComponent implements OnInit {
       return new Date(b.datum).getTime() - new Date(a.datum).getTime();
     }).forEach( (item: News, index: number) => {
       row.push(item);
-      if (index === 1 || (index > 2 && index % 3 === 0)) {
+      if (index === 1 || (index > 2 && index % 2 === 1)) {
         this.convertedNews.push(row);
         row = [];
       } else if (this.news.length - 1 === index && index % 2 === 0) {
-        console.log('Ide befut');
-        console.log('Index: ', index);
-        console.log('Length: ', this.news.length);
         this.convertedNews.push(row);
       }
     });

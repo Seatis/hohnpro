@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {News} from '../news/model/news.model';
 import {SystemService} from '../service/system.service';
+import {HohnUtil} from '../common/hohn.util';
 
 @Component({
   selector: 'hohn-newsmain',
@@ -10,7 +11,7 @@ import {SystemService} from '../service/system.service';
 })
 export class NewsMainComponent implements OnInit {
 
-  public feedUrl: string = '//lightwidget.com/widgets/6883079ffee25ee2bdd46884b3fe7096.html';
+  public feedUrl: string = HohnUtil.getInstaUrl();
   public news1: News;
   public news2: News;
   public videoUrl: SafeUrl = 'https://www.youtube.com/embed/MR0mREbEpMY';
@@ -21,8 +22,6 @@ export class NewsMainComponent implements OnInit {
 
   public ngOnInit(): void {
     this.initNews();
-    console.log(this.news1);
-    console.log(this.news2);
   }
 
   public instaURL(url: string): SafeUrl {
@@ -37,8 +36,6 @@ export class NewsMainComponent implements OnInit {
     this.news1 = news[0];
     this.news2 = news[1];
     this.getLastVideoUrl(news);
-    console.log(this.videoUrl);
-
   }
 
   private getLastVideoUrl(news: News[]): void {
