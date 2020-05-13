@@ -96,5 +96,50 @@ export const newsData: News[] = [
     videoUrl: 'https://www.youtube.com/embed/cL-MSp7oobY',
     rovidLeiras: 'Hogyan menti meg a szegényeket a kormány az uzsorásoktól járvány idején? Hohn Krisztina azonnali kérdése 2020. ápr. 20.'
   },
+  {
+    id: 8,
+    cim: 'Orbán Viktor: nő ügyekkel nem foglalkozik!',
+    datum: new Date('2020-05-04T10:00:00'),
+    htmlContent: `<p>A kormány egy elfogadhatatlan politikai nyilatkozatot terjesztett elő, amely elutasítja az isztambuli egyezményt.<br />
+                  Jól mutatja az Orbán kormány hozzáállását, hiszen a miniszterelnök is megmondta: nő ügyekkel, nem foglakozik!</p>
+                  <p>Hohn Krisztina (Új Kezdet) országgyűlési képviselő felszólalása.</p>`,
+    kategoria: 'Hír',
+    kepMainUrl: 'assets/images/news/general/general_2.jpg',
+    kepSecUrl: 'assets/images/news/general/general_sec_1.jpg',
+    szerzo: 'Hohn Krisztina',
+    videoUrl: 'https://www.youtube.com/embed/FsZ8Cx_aUSw',
+    rovidLeiras: 'Orbán Viktor: nő ügyekkel nem foglalkozik! Az isztambuli egyezmény elutasítása.'
+  },
+  {
+    id: 9,
+    cim: 'Hogy-hogy, maguknak ilyenkor, amikor járvány van, ez jár az eszükben?',
+    datum: new Date('2020-05-05T10:00:00'),
+    htmlContent: `<p>"Hogy-hogy, maguknak ilyenkor, amikor járvány van, ez jár az eszükben?"<br />
+                  Kérdezte a parlamentben Hohn Krisztina (LMP-UK) baranyai országgyűlési képviselő.</p>
+                  <p>Kattintson az alábbi linkre az interjú olvasásához:</p>
+                  <p><a href="https://szabadpecs.hu/2020/05/hogyhogy-maguknak-ilyenkor-amikor-jarvany-van-ez-jar-az-eszukben/?fbclid=IwAR1rtRk0nyfymSmAZcu7QaXIVBAYukQyul8nN-_NbToJNqqVCaI6oFKcdGM">https://szabadpecs.hu/2020/05/hogyhogy-maguknak-ilyenkor-amikor-jarvany-van-ez-jar-az-eszukben/?fbclid=IwAR1rtRk0nyfymSmAZcu7QaXIVBAYukQyul8nN-_NbToJNqqVCaI6oFKcdGM</a></p>`,
+    kategoria: 'Hír',
+    kepMainUrl: 'assets/images/news/general/general_1.jpg',
+    kepSecUrl: 'assets/images/news/general/general_sec_1.jpg',
+    szerzo: 'Hohn Krisztina',
+    videoUrl: null,
+    rovidLeiras: 'Hogy-hogy, maguknak ilyenkor, amikor járvány van, ez jár az eszükben?, 2020. május 05.'
+  },
+  {
+    id: 10,
+    cim: 'Mi lesz a nehéz helyzetben élőkkel?',
+    datum: new Date('2020-05-08T10:00:00'),
+    htmlContent: `<p>"Jelen pillanatban szükség lenne valamilyen központi keretre, melyre az érintett önkormányzatok -szociális és védekezési feladataik költségére- igényt nyújthatnának be. Hosszú távon pedig elengedhetetlen lesz a leszakadó térségek hatékony felzárkóztatására. Fel kell térképezni a hiányosságokat és a lehetőségeket egyaránt és meg kell alkotni egy olyan programot, mely alkalmas a problémák kezelésére és természetesen ehhez a megfelelő forrásokat is hozzá kell rendelni."</p>
+                  <p class="align-right">Hohn Krisztina</p>
+                  <p>Kattintson az alábbi linkre az interjú olvasásához:</p>
+                  <p><a href="https://ugytudjuk.hu/cikk/hohn-krisztina-a-nehez-helyzetben-elok-ebben-az-idoszakban-meg-rosszabb-helyzetbe-kerulhetnek?fbclid=IwAR1pPV50OfbVLQU-p-HQkWPH-XzPYNrYgfJRC1vCkskk1J6ds0VjLntR4zI">https://ugytudjuk.hu/cikk/hohn-krisztina-a-nehez-helyzetben-elok-ebben-az-idoszakban-meg-rosszabb-helyzetbe-kerulhetnek?fbclid=IwAR1pPV50OfbVLQU-p-HQkWPH-XzPYNrYgfJRC1vCkskk1J6ds0VjLntR4zI</a></p>`,
+    kategoria: 'Hír',
+    kepMainUrl: 'assets/images/news/20200508/202005081000.jpg',
+    kepSecUrl: 'assets/images/news/20200508/202005081000_sec.jpg',
+    szerzo: 'Hohn Krisztina',
+    videoUrl: null,
+    rovidLeiras: 'Mi lesz a nehéz helyzetben élőkkel? Interjú Hohn Krisztinával, 2020. május 08.'
+  }
+
 ];
 
