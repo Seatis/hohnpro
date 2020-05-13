@@ -1,9 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { HeaderService } from '../service/header.service';
-import { Router, NavigationEnd } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { DynamicScriptLoaderService } from '../service/dynamic-script-loader.service';
-import { TokenService } from '../service/token.service';
+import {Component, OnInit} from '@angular/core';
+import {HeaderService} from '../service/header.service';
+import {TokenService} from '../service/token.service';
 
 @Component({
   selector: 'hohn-index',
@@ -11,12 +8,9 @@ import { TokenService } from '../service/token.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  
+  constructor(private headerService: HeaderService, public tokenService: TokenService) {
 
-  private mySubscription: Subscription;
-
-  private loaded: boolean = true;
-  constructor(private headerService: HeaderService, public tokenService: TokenService) { 
-    
   }
 
   public ngOnInit(): void {
@@ -24,6 +18,4 @@ export class IndexComponent implements OnInit {
     this.headerService.setHeaderStyle('fixed-header');
   }
 
-  
-  
 }

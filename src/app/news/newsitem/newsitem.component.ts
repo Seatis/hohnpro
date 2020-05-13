@@ -37,10 +37,8 @@ export class NewsitemComponent implements OnInit {
     this.route.params.subscribe(
       params => {
         if (params['id']) {
-          console.log('ID: ', params['id']);
           this.news = this.systemService.getNewsById(Number(params['id']));
           this.initNews(Number(params['id']));
-          console.log(this.news);
         }
       }
     );
