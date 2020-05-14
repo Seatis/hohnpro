@@ -19,13 +19,7 @@ export class HohnMenuComponent implements OnInit {
 export const hohnMenu: HohnMenu[] = [
   {label: 'Főoldal', url: '/', items: null},
   {label: 'Hírek', url: '/news', items: null},
-  {label: 'Céljaim', url: '/', fragment: 'hohnaction', items: [
-      // {label: 'Agrárium', url: '/', fragment: 'hohnaction', items: null},
-      // {label: 'Egészségügy', url: '/', fragment: 'hohnaction', items: null},
-      // {label: 'Oktatás', url: '/', fragment: 'hohnaction', items: null},
-      // {label: 'Szociális ágazat', url: '/', fragment: 'hohnaction', items: null},
-      // {label: 'Önkormányzat', url: '/', fragment: 'hohnaction', items: null},
-    ]},
+  {label: 'Céljaim', url: '/', fragment: 'hohnaction', items: null},
   {label: 'Események', url: '/event', items: [
       {label: 'Eseménynaptár', url: '/event', items: null}
     ]},
@@ -39,6 +33,14 @@ export const hohnMenu: HohnMenu[] = [
 // {label: 'Hírek', url: '/news', items: [
 //   {label: 'Archívum', url: '/'}
 // ]},
+
+
+// {label: 'Agrárium', url: '/', fragment: 'hohnaction', items: null},
+// {label: 'Egészségügy', url: '/', fragment: 'hohnaction', items: null},
+// {label: 'Oktatás', url: '/', fragment: 'hohnaction', items: null},
+// {label: 'Szociális ágazat', url: '/', fragment: 'hohnaction', items: null},
+// {label: 'Önkormányzat', url: '/', fragment: 'hohnaction', items: null},
+
 
 export const hohnMenuOld: HohnMenu[] = [
   {label: 'Home', url: '/', items: [
