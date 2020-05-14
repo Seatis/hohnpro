@@ -15,7 +15,7 @@ export const CarouselMock: Carousel[] = [
   },
   {
     title: 'Oktatás',
-    description: '21. századi iskolát! Szabad oktatást!',
+    description: '21. századi iskolákat! ',
     img: 'assets/images/carousel/263x180_img_oktatas.jpg',
     url: '#'
   },
