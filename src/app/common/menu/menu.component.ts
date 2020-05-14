@@ -20,11 +20,11 @@ export const hohnMenu: HohnMenu[] = [
   {label: 'Főoldal', url: '/', items: null},
   {label: 'Hírek', url: '/news', items: null},
   {label: 'Céljaim', url: '/', fragment: 'hohnaction', items: [
-      {label: 'Agrárium', url: '/', fragment: 'hohnaction', items: null},
+      // {label: 'Agrárium', url: '/', fragment: 'hohnaction', items: null},
       {label: 'Egészségügy', url: '/', fragment: 'hohnaction', items: null},
       {label: 'Oktatás', url: '/', fragment: 'hohnaction', items: null},
-      {label: 'Családpolitika', url: '/', fragment: 'hohnaction', items: null},
-      {label: 'Önkormányzat', url: '/', fragment: 'hohnaction', items: null},
+      {label: 'Szociális ágazat', url: '/', fragment: 'hohnaction', items: null},
+      // {label: 'Önkormányzat', url: '/', fragment: 'hohnaction', items: null},
     ]},
   {label: 'Események', url: '/event', items: [
       {label: 'Eseménynaptár', url: '/event', items: null}
