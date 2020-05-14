@@ -751,11 +751,11 @@
 
 					base.navButton.on(base.event, function (e) {
 						e.preventDefault();
-
+            // TODO height: base.navMobile.children('ul').outerHeight(true) helyett 800px, celok mobile hack
 						if (!base.wrapper.is('.active')) {
 							$('html, body').animate({ scrollTop: 0 }, 0, function () {
 								base.wrapper.css({
-									height: base.navMobile.children('ul').outerHeight(true)
+									height: '800px'
 								}).addClass('active');
 							});
 						}
