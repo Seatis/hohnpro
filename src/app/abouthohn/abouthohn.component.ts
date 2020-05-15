@@ -15,6 +15,7 @@ export class AbouthohnComponent implements OnInit {
   public events: Event[] = Events;
   public facebookUrl: string = HohnUtil.getFacebookUrl();
   public instaUrl: string = HohnUtil.getInstaUrl();
+  public instaHomeUrl: string = HohnUtil.getInstaHomeUrl();
 
   constructor(
     private headerService: HeaderService,
