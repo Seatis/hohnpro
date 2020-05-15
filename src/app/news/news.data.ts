@@ -139,6 +139,19 @@ export const newsData: News[] = [
     szerzo: 'Hohn Krisztina',
     videoUrl: null,
     rovidLeiras: 'Mi lesz a nehéz helyzetben élőkkel? Interjú Hohn Krisztinával, 2020. május 08.'
+  },
+  {
+    id: 11,
+    cim: 'A szociális dolgozók is megkapják a megérdemelt 500 ezer forintot?',
+    datum: new Date('2020-05-11T10:00:00'),
+    htmlContent: `<p>A szociális dolgozók is megkapják a megérdemelt 500 ezer forintot?</p>
+                  <p>Hohn Krisztina azonnali kérdése 2020.05.11.</p>`,
+    kategoria: 'Hír',
+    kepMainUrl: 'assets/images/news/general/general_2.jpg',
+    kepSecUrl: 'assets/images/news/general/general_sec_1.jpg',
+    szerzo: 'Hohn Krisztina',
+    videoUrl: 'https://www.youtube.com/embed/osFPJKElNYE',
+    rovidLeiras: 'A szociális dolgozók is megkapják a megérdemelt 500 ezer forintot? Hohn Krisztina azonnali kérdése 2020.05.11.'
   }
 
 ];
