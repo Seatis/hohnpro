@@ -152,6 +152,20 @@ export const newsData: News[] = [
     szerzo: 'Hohn Krisztina',
     videoUrl: 'https://www.youtube.com/embed/osFPJKElNYE',
     rovidLeiras: 'A szociális dolgozók is megkapják a megérdemelt 500 ezer forintot? Hohn Krisztina azonnali kérdése 2020.05.11.'
+  },
+  {
+    id: 12,
+    cim: 'Áprilisban 330 ezerre nőtt a munkanélküliek száma',
+    datum: new Date('2020-05-20T10:00:00'),
+    htmlContent: `<p>Az ATV Start vendégei Hohn Krisztina országgyűlési képviselő, LMP és Burány Sándor frakcióvezető-helyettes, Párbeszéd.</p>
+                  <p>Az interjú megtekintéséhez kattintson az alábbi linkre:</p>
+                  <p><a href="http://www.atv.hu/videok/video-20200520-330-ezerre-nott-a-munkanelkuliek-szama">http://www.atv.hu/videok/video-20200520-330-ezerre-nott-a-munkanelkuliek-szama</a></p>`,
+    kategoria: 'Hír',
+    kepMainUrl: 'assets/images/news/20200520/202005201000.jpg',
+    kepSecUrl: 'assets/images/news/20200520/202005201000_sec.jpg',
+    szerzo: 'Hohn Krisztina',
+    videoUrl: null,
+    rovidLeiras: 'Az ATV Start vendégei Hohn Krisztina országgyűlési képviselő, LMP és Burány Sándor frakcióvezető-helyettes, Párbeszéd.'
   }
 
 ];
