@@ -203,6 +203,19 @@ export const newsData: News[] = [
     szerzo: 'Hohn Krisztina',
     videoUrl: 'https://www.youtube.com/embed/syUP1-ZFM5g',
     rovidLeiras: 'Hohn Krisztina (Új Kezdet elnök) kétperces felszólalása az örökbefogadásról szóló törvény vitájában.'
+  },
+  {
+    id: 16,
+    cim: 'A kormány és a diplomások ára',
+    datum: new Date('2020-05-21T14:00:00'),
+    htmlContent: `<p>Hohn Krisztina publicisztikája. Kattintson az alábbi linkre a megtekintéshez: </p>
+                  <p><a href="https://nepszava.hu/3078845_a-kormany-es-a-diplomasok-ara">https://nepszava.hu/3078845_a-kormany-es-a-diplomasok-ara</a></p>`,
+    kategoria: NewsCategoryKeys.EGYEB_HIR,
+    kepMainUrl: 'assets/images/news/20200521/20200521.jpg',
+    kepSecUrl: 'assets/images/news/20200521/20200521_sec.jpg',
+    szerzo: 'Hohn Krisztina',
+    videoUrl: null,
+    rovidLeiras: 'Hohn Krisztina publicisztikája.'
   }
 
 ];
