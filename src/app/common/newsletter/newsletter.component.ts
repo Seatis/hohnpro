@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NewsletterService} from './service/newsletter.service';
 import {MessageService} from 'primeng/api';
+import {HohnUtil} from '../hohn.util';
 
 @Component({
   selector: 'hohn-newsletter',
@@ -10,6 +11,7 @@ import {MessageService} from 'primeng/api';
 export class NewsletterComponent implements OnInit {
 
   public email: string;
+  public parlamentEloUrl: string = HohnUtil.getParlamentEloUrl();
   constructor(private newsletterService: NewsletterService, private messageService: MessageService) { }
 
   public ngOnInit(): void {

@@ -4,6 +4,7 @@ export class HohnUtil {
   static readonly instaHomeUrl: string = 'https://www.instagram.com/hohnkriszta/';
   static readonly facebookUrl: string = 'https://www.facebook.com/hohnkrisztina/';
   static readonly youTubeChannelUrl: string = 'https://www.youtube.com/channel/UCyG0Db9NOIunagFAu6qlCLQ';
+  static readonly parlamentEloUrl: string = 'https://parlament.hu/plenaris-elokozvetites';
 
   static getInstaUrl(): string {
     return this.instaUrl;
@@ -19,5 +20,9 @@ export class HohnUtil {
 
   static getInstaHomeUrl(): string {
     return this.instaHomeUrl;
+  }
+
+  static getParlamentEloUrl(): string {
+    return this.parlamentEloUrl;
   }
 }

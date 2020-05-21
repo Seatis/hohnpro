@@ -20,8 +20,8 @@ export const CarouselMock: Carousel[] = [
     url: '#'
   },
   {
-    title: 'Szociális ágazat',
-    description: 'A különböző családpolitikai ellátásokkal az államok általában egy-egy kiemelt cél elérésére törekednek.',
+    title: 'Családpolitika, örökbefogadás, szociális háló',
+    description: 'Tegyünk együtt a családon belüli erőszak ellen!',
     img: 'assets/images/carousel/263x180_img_csalad.jpg',
     url: '#'
   },
