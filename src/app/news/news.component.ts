@@ -17,7 +17,7 @@ export class NewsComponent implements OnInit {
   public convertedNews: News[][] = [];
   private news: News[];
   private oneMonthOffset: number = 2674800000;
-  private newsCategory: string = null;
+  private newsCategory: string = 'Hírek';
 
   constructor(
     private headerService: HeaderService,
@@ -34,7 +34,8 @@ export class NewsComponent implements OnInit {
       params => {
         console.log(params['id']);
         if (params['id']) {
-          this.initNews(params['id'])
+          this.initNews(params['id']);
+          this.newsCategory = params['id'] === 'all' ? 'Hírek' : this.systemService.getNewsCategoryValue(params['id']);
         } else {
           this.initNews(NewsCategoryKeys.ALL);
         }

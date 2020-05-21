@@ -13,7 +13,7 @@ export class SystemService {
   private newsCategoryMap: Map<string, string> = new Map();
 
   constructor() {
-    this.newsCategoryMap.set(NewsCategoryKeys.EGYEB_HIR, 'Hír');
+    this.newsCategoryMap.set(NewsCategoryKeys.EGYEB_HIR, 'Egyéb hír');
     this.newsCategoryMap.set(NewsCategoryKeys.PARLAMENTI_FELSZOLALAS, 'Parlamenti felszólalás');
     this.newsCategoryMap.set(NewsCategoryKeys.SAJTOTAJEKOZTATO, 'Sajtótájékoztató');
     this.newsCategoryMap.set(NewsCategoryKeys.MEDIA, 'Média');

@@ -6,12 +6,13 @@
 
     <div class="container">
 
-      <h1 class="page-title">Hírek</h1>
+      <h1 class="page-title">{{newsCategory}}</h1>
 
       <ul class="breadcrumbs">
 
         <li><a routerLink="/">Főoldal</a></li>
-        <li>Hírek</li>
+        <li><a routerLink="/news/all">Hírek</a></li>
+        <li *ngIf="newsCategory !== 'Hírek'">{{newsCategory}}</li>
 
       </ul>
 
