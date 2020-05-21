@@ -166,6 +166,30 @@ export const newsData: News[] = [
     szerzo: 'Hohn Krisztina',
     videoUrl: null,
     rovidLeiras: 'Az ATV Start vendégei Hohn Krisztina országgyűlési képviselő, LMP és Burány Sándor frakcióvezető-helyettes, Párbeszéd.'
+  },
+  {
+    id: 13,
+    cim: 'Kell felkészítő tanfolyam az örökbefogadás előtt',
+    datum: new Date('2020-05-20T14:00:00'),
+    htmlContent: `<p>Hohn Krisztina vezérszónoki felszólalása az örökbefogadásról szóló törvény vitájában.</p>`,
+    kategoria: 'Hír',
+    kepMainUrl: 'assets/images/news/general/general_1.jpg',
+    kepSecUrl: 'assets/images/news/general/general_sec_1.jpg',
+    szerzo: 'Hohn Krisztina',
+    videoUrl: 'https://www.youtube.com/embed/XoHi9AbfCI8',
+    rovidLeiras: 'Hohn Krisztina vezérszónoki felszólalása az örökbefogadásról szóló törvény vitájában.'
+  },
+  {
+    id: 14,
+    cim: 'Az örökbefogadási tanfolyam fontosságáról',
+    datum: new Date('2020-05-21T10:00:00'),
+    htmlContent: `<p>Hohn Krisztina (Új Kezdet elnök) kétperces felszólalása az örökbefogadásról szóló törvény vitájában.</p>`,
+    kategoria: 'Hír',
+    kepMainUrl: 'assets/images/news/general/general_2.jpg',
+    kepSecUrl: 'assets/images/news/general/general_sec_1.jpg',
+    szerzo: 'Hohn Krisztina',
+    videoUrl: 'https://www.youtube.com/embed/syUP1-ZFM5g',
+    rovidLeiras: 'Hohn Krisztina (Új Kezdet elnök) kétperces felszólalása az örökbefogadásról szóló törvény vitájában.'
   }
 
 ];
