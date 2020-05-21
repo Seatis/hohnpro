@@ -4,6 +4,8 @@ import {TokenService} from '../service/token.service';
 import {News} from './model/news.model';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {SystemService} from '../service/system.service';
+import {NewsCategoryKeys} from './news.category.keys';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'hohn-news',
@@ -15,18 +17,29 @@ export class NewsComponent implements OnInit {
   public convertedNews: News[][] = [];
   private news: News[];
   private oneMonthOffset: number = 2674800000;
+  private newsCategory: string = null;
 
   constructor(
     private headerService: HeaderService,
     public tokenService: TokenService,
     private sanitizer: DomSanitizer,
-    private systemService: SystemService
+    private systemService: SystemService,
+    private route: ActivatedRoute
   ) { }
 
   public ngOnInit(): void {
     this.tokenService.setToken();
     this.headerService.setHeaderStyle('style-2');
-    this.initNews();
+    this.route.params.subscribe(
+      params => {
+        console.log(params['id']);
+        if (params['id']) {
+          this.initNews(params['id'])
+        } else {
+          this.initNews(NewsCategoryKeys.ALL);
+        }
+      }
+    );
   }
 
   public isNewsFeatured(datum: Date): boolean {
@@ -37,8 +50,11 @@ export class NewsComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
-  private initNews(): void {
-    this. news = this.systemService.getNews();
+  private initNews(category: string): void {
+    this.convertedNews = [];
+    this. news = category === NewsCategoryKeys.ALL
+      ? this.systemService.getNews()
+      : this.systemService.getNews().filter( (news: News) => news.kategoria === category);
     this.newsGridConverter();
   }
 

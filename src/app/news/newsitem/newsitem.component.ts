@@ -55,7 +55,7 @@ export class NewsitemComponent implements OnInit {
   }
 
   public navigate(id: number): void {
-    this.router.navigate([`/news/content/${id}`]);
+    this.router.navigate([`/content/${id}`]);
   }
 
 }

@@ -38,15 +38,15 @@
                 <ng-template #noVideo><img [src]="getSafeUrl(newsItem.kepMainUrl)" alt=""></ng-template>
               </div>
               <div class="event-info">
-                <h5 class="event-link"><span *ngIf="isNewsFeatured(newsItem.datum)" class="label">Kiemelt</span><a routerLink="/news/content/{{newsItem.id}}">{{newsItem.cim}}</a></h5>
+                <h5 class="event-link"><span *ngIf="isNewsFeatured(newsItem.datum)" class="label">Kiemelt</span><a routerLink="/content/{{newsItem.id}}">{{newsItem.cim}}</a></h5>
                 <div class="entry-meta">
 
                   <time class="entry-date">{{newsItem.datum.toLocaleDateString()}}</time>
                   <span class="entry-byline">Szerző: <a routerLink="/about">{{newsItem.szerzo}}</a></span>
-                  <span class="entry-cat">Kategória: {{newsItem.kategoria}}</span>
+                  <span class="entry-cat">Kategória: {{systemService.getNewsCategoryValue(newsItem.kategoria)}}</span>
                 </div>
                 <p>{{newsItem.rovidLeiras}}</p>
-                <a routerLink="/news/content/{{newsItem.id}}" class="info-btn">Tovább a hírre ...</a>
+                <a routerLink="/content/{{newsItem.id}}" class="info-btn">Tovább a hírre ...</a>
               </div>
             </div>
           </div>

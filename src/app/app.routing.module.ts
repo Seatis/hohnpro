@@ -15,10 +15,8 @@ const APP_ROUTING : Routes = [
   // {path: 'home', component: OrderscreenComponent},
   {path: '', component: IndexComponent},
   {path: 'about', component: AbouthohnComponent, runGuardsAndResolvers: 'always'},
-  {path: 'news', runGuardsAndResolvers: 'always', children: [
-      {path: '', component: NewsComponent, runGuardsAndResolvers: 'always'},
-      {path: 'content/:id', component: NewsitemComponent, runGuardsAndResolvers: 'always'}
-    ]},
+  {path: 'news/:id', component: NewsComponent, runGuardsAndResolvers: 'always'},
+  {path: 'content/:id', component: NewsitemComponent, runGuardsAndResolvers: 'always'},
   {path: 'event', component: EventComponent, runGuardsAndResolvers: 'always'},
   {path: 'contact', component: ContactComponent, runGuardsAndResolvers: 'always'},
   {path: '**', redirectTo: '', pathMatch: 'full'}

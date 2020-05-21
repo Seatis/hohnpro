@@ -5,12 +5,18 @@ import {Event} from '../common/calendar/model/event.model';
 import {Events} from '../common/calendar/events.mock';
 import {supportMock} from '../common/support/support.mock';
 import {Support} from '../common/support/model/support.model';
+import {NewsCategoryKeys} from '../news/news.category.keys';
 
 @Injectable()
 export class SystemService {
 
-  constructor() {
+  private newsCategoryMap: Map<string, string> = new Map();
 
+  constructor() {
+    this.newsCategoryMap.set(NewsCategoryKeys.EGYEB_HIR, 'Hír');
+    this.newsCategoryMap.set(NewsCategoryKeys.PARLAMENTI_FELSZOLALAS, 'Parlamenti felszólalás');
+    this.newsCategoryMap.set(NewsCategoryKeys.SAJTOTAJEKOZTATO, 'Sajtótájékoztató');
+    this.newsCategoryMap.set(NewsCategoryKeys.MEDIA, 'Média');
   }
 
   public getNews(): News[] {
@@ -29,6 +35,9 @@ export class SystemService {
     return supportMock;
   }
 
+  public getNewsCategoryValue(key: string): string {
+    return this.newsCategoryMap.get(key);
+  }
 
 }
 

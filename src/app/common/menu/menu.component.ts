@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HohnMenu} from './model/menu.model';
+import {NewsCategoryKeys} from '../../news/news.category.keys';
 
 @Component({
   selector: 'hohn-menu',
@@ -18,7 +19,13 @@ export class HohnMenuComponent implements OnInit {
 
 export const hohnMenu: HohnMenu[] = [
   {label: 'Főoldal', url: '/', items: null},
-  {label: 'Hírek', url: '/news', items: null},
+  {label: 'Hírek', url: '/news/' + NewsCategoryKeys.ALL, items: [
+      {label: 'Összes hír', url: '/news/' + NewsCategoryKeys.ALL, items: null},
+      {label: 'Parlamenti felszólalás', url: '/news/' + NewsCategoryKeys.PARLAMENTI_FELSZOLALAS, items: null},
+      {label: 'Sajtótájékoztató', url: '/news/' + NewsCategoryKeys.SAJTOTAJEKOZTATO, items: null},
+      {label: 'Média', url: '/news/' + NewsCategoryKeys.MEDIA, items: null},
+      {label: 'Egyéb hír', url: '/news/' + NewsCategoryKeys.EGYEB_HIR, items: null}
+    ]},
   {label: 'Céljaim', url: '/', fragment: 'hohnaction', items: null},
   {label: 'Események', url: '/event', items: [
       {label: 'Eseménynaptár', url: '/event', items: null}
