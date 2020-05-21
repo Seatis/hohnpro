@@ -43,7 +43,7 @@
 
                   <time class="entry-date">{{newsItem.datum.toLocaleDateString()}}</time>
                   <span class="entry-byline">Szerző: <a routerLink="/about">{{newsItem.szerzo}}</a></span>
-                  <span class="entry-cat">Kategória: {{systemService.getNewsCategoryValue(newsItem.kategoria)}}</span>
+                  <span class="entry-cat">Kategória: <a routerLink="/news/{{newsItem.kategoria}}">{{systemService.getNewsCategoryValue(newsItem.kategoria)}}</a></span>
                 </div>
                 <p>{{newsItem.rovidLeiras}}</p>
                 <a routerLink="/content/{{newsItem.id}}" class="info-btn">Tovább a hírre ...</a>

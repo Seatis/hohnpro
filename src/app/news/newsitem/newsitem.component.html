@@ -43,7 +43,7 @@
 
                 <time class="entry-date">{{news.datum.toLocaleDateString()}}</time>
                 <span class="entry-byline">Szerző: <a href="#">{{news.szerzo}}</a></span>
-                <span class="entry-cat">Kategória: <a href="#">{{systemService.getNewsCategoryValue(news.kategoria)}}</a></span>
+                <span class="entry-cat">Kategória: <a routerLink="/news/{{news.kategoria}}">{{systemService.getNewsCategoryValue(news.kategoria)}}</a></span>
 
               </div>
               <div [innerHTML]="news.htmlContent"></div>
