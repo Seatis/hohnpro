@@ -455,15 +455,17 @@
 	                    $(this).html("");
 	                  })
 	                  .prevAll('input[type="email"]').val("");
-	              }else{
-	                text = "Invalid email address!";
-	                message.html('<div class="alert-box error"></i><p>'+text+'</p></div>')
-	                  .slideDown()
-	                  .delay(4000)
-	                  .slideUp(function(){
-	                    $(this).html("");
-	                  });
 	              }
+	              // TODO else ágat kivettem, mert folyamatosan ezt dobja szerverrol, es nincs jelentosege!
+	              // else{
+	              //   text = "Invalid email address!";
+	              //   message.html('<div class="alert-box error"></i><p>'+text+'</p></div>')
+	              //     .slideDown()
+	              //     .delay(4000)
+	              //     .slideUp(function(){
+	              //       $(this).html("");
+	              //     });
+	              // }
 	            }
 	          });
 	        }
