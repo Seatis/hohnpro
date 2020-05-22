@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {NewsletterService} from './service/newsletter.service';
 import {MessageService} from 'primeng/api';
 import {HohnUtil} from '../hohn.util';
+import {NgModel} from '@angular/forms';
 
 @Component({
   selector: 'hohn-newsletter',
@@ -20,16 +21,21 @@ export class NewsletterComponent implements OnInit {
     // });
   }
 
-  public postContact(): void {
+  public postContact(email: NgModel): void {
+    console.log(email.errors);
     if (!!this.email) {
-      this.newsletterService.postContact(this.email).subscribe(response => {
-        if (!!response && !!response.id) {
-          this.messageService.add({severity: 'info', summary: 'Sikeres feliratkozás!', detail: this.email});
-          this.email = '';
-        } else {
-          this.messageService.add({severity: 'error', summary: 'Sikertelen feliratkozás!', detail: 'Kérem ellenőrizze a beírt e-mail címet!'});
-        }
-      });
+      if (email.errors) {
+        this.messageService.add({severity: 'error', summary: 'Sikertelen feliratkozás!', detail: `Hibás email cím formátum! (${this.email})`});
+      } else {
+        this.newsletterService.postContact(this.email).subscribe(response => {
+          if (!!response && !!response.id) {
+            this.messageService.add({severity: 'info', summary: 'Sikeres feliratkozás!', detail: this.email});
+            this.email = '';
+          } else {
+            this.messageService.add({severity: 'error', summary: 'Sikertelen feliratkozás!', detail: 'Kérem ellenőrizze a beírt e-mail címet!'});
+          }
+        });
+      }
     }
   }
 

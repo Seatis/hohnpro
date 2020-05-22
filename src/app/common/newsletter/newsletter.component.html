@@ -5,9 +5,9 @@
         <div class="bg-col-1">
           <h5>Hírlevél</h5>
           <form id="newsletter" class="join-form">
-            <button class="btn btn-style-4 btn-big f-right" (click)="postContact()">Feliratkozom</button>
+            <button class="btn btn-style-4 btn-big f-right" (click)="postContact(newsLetterEmail)">Feliratkozom</button>
             <div class="input-holder">
-              <input [(ngModel)]="email" type="email" name="newsletter-email" placeholder="Email cím">
+              <input [(ngModel)]="email" type="email" name="newsletter-email" placeholder="Email cím" email #newsLetterEmail="ngModel">
               <input type="text" placeholder="Irányítószám">
             </div>
           </form>
