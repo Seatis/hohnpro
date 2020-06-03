@@ -1,0 +1,13 @@
+USE hohnhu_angular;
+CREATE TABLE hohn_news (
+  id BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
+  cim VARCHAR(255) NOT NULL,
+  szerzo VARCHAR(255) NOT NULL,
+  kategoria VARCHAR(255) NOT NULL,
+  kepMainUrl VARCHAR(255) NOT NULL,
+  kepSecUrl VARCHAR(255) NOT NULL,
+  videoUrl VARCHAR(255),
+  datum DATETIME NOT NULL,
+  htmlContent TEXT NOT NULL,
+  rovidLeiras VARCHAR(255) NOT NULL
+) DEFAULT CHARSET=utf8;
