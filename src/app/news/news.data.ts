@@ -241,6 +241,18 @@ export const newsData: News[] = [
     szerzo: 'Új Kezdet',
     videoUrl: null,
     rovidLeiras: 'A trianoni békediktátum 100. évfordulója. 2020. június 4.'
+  },
+  {
+    id: 19,
+    cim: 'Bot és bilincs az iskolaőröknél?',
+    datum: new Date('2020-06-10T10:00:00'),
+    htmlContent: `<p style="text-align: justify">Hohn Krisztina parlamenti felszólalása az iskolaőrökkel kapcsolatban.</p>`,
+    kategoria: NewsCategoryKeys.PARLAMENTI_FELSZOLALAS,
+    kepMainUrl: 'assets/images/news/general/general_1.jpg',
+    kepSecUrl: 'assets/images/news/general/general_sec_1.jpg',
+    szerzo: 'Hohn Krisztina',
+    videoUrl: 'https://www.youtube.com/embed/5pnh0kOSt7M',
+    rovidLeiras: 'Hohn Krisztina parlamenti felszólalása az iskolaőrökkel kapcsolatban.'
   }
 
 ];
