@@ -7,6 +7,7 @@ import {SystemService} from '../../service/system.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Event} from '../../common/calendar/model/event.model';
 import {Events} from '../../common/calendar/events.mock';
+import {HohnUtil} from '../../common/hohn.util';
 
 @Component({
   selector: 'hohn-news',

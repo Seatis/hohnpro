@@ -35,6 +35,7 @@ import {EventComponent} from './event/event.component';
 import {EventfeedComponent} from './common/eventfeed/eventfeed.component';
 import {SupportComponent} from './common/support/support.component';
 import {ContactComponent} from './contact/contact.component';
+import {FacebookComponent} from './common/facebook/facebook.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import {ContactComponent} from './contact/contact.component';
     EventComponent,
     EventfeedComponent,
     SupportComponent,
-    ContactComponent
+    ContactComponent,
+    FacebookComponent
   ],
   imports: [
     BrowserModule,
