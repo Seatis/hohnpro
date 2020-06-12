@@ -253,6 +253,18 @@ export const newsData: News[] = [
     szerzo: 'Hohn Krisztina',
     videoUrl: 'https://www.youtube.com/embed/5pnh0kOSt7M',
     rovidLeiras: 'Hohn Krisztina parlamenti felszólalása az iskolaőrökkel kapcsolatban.'
+  },
+  {
+    id: 20,
+    cim: 'Változnak az örökbefogadás szabályai',
+    datum: new Date('2020-06-12T10:00:00'),
+    htmlContent: `<p>Az ATV - Egyenes Besz&eacute;d vend&eacute;gei: Hohn Krisztina orsz&aacute;ggyűl&eacute;si k&eacute;pviselő, &eacute;s Bayer Friderika &eacute;nekesnő 2020.06.11.</p>`,
+    kategoria: NewsCategoryKeys.MEDIA,
+    kepMainUrl: 'assets/images/news/20200612/20200612.jpg',
+    kepSecUrl: 'assets/images/news/20200612/20200612_sec.jpg',
+    szerzo: 'Hohn Krisztina',
+    videoUrl: 'https://www.youtube.com/embed/SlKOOXBXmX8',
+    rovidLeiras: 'Az ATV - Egyenes Beszéd vendégei: Hohn Krisztina országgyűlési képviselő, és Bayer Friderika énekesnő 2020.06.11.'
   }
 
 ];
