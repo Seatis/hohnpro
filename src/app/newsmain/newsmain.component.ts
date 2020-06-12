@@ -3,6 +3,8 @@ import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {News} from '../news/model/news.model';
 import {SystemService} from '../service/system.service';
 import {HohnUtil} from '../common/hohn.util';
+import {RestResponse} from '../common/model/restresponse.model';
+import {NewsCategoryKeys} from '../news/news.category.keys';
 
 @Component({
   selector: 'hohn-newsmain',
@@ -14,13 +16,18 @@ export class NewsMainComponent implements OnInit {
   public feedUrl: string = HohnUtil.getInstaUrl();
   public news1: News;
   public news2: News;
-  public videoUrl: SafeUrl = 'https://www.youtube.com/embed/MR0mREbEpMY';
+  public videoUrl: string = 'https://www.youtube.com/embed/MR0mREbEpMY';
 
-  constructor(private sanitizer: DomSanitizer, private systemService: SystemService) {
+  constructor(public sanitizer: DomSanitizer, private systemService: SystemService) {
 
   }
 
   public ngOnInit(): void {
+    // this.systemService.getNewsByID(11).subscribe( (response: RestResponse<News>) => {
+    //   if (response.data) {
+    //     console.log(response.data);
+    //   }
+    // });
     this.initNews();
   }
 
@@ -29,19 +36,36 @@ export class NewsMainComponent implements OnInit {
   }
 
   private initNews(): void {
-    let news: News[] = this.systemService.getNews();
-    news.sort(function(a,b){
-      return new Date(b.datum).getTime() - new Date(a.datum).getTime();
+    let news: News[];
+    this.systemService.getNewsAll().subscribe( (response: RestResponse<News[]>) => {
+      if (!!response.data) {
+        news = response.data;
+        news.sort(function(a,b){
+          return new Date(b.datum).getTime() - new Date(a.datum).getTime();
+        });
+        this.news1 = news[0];
+        this.news2 = news[1];
+        this.getLastVideoUrl(news);
+      }
     });
-    this.news1 = news[0];
-    this.news2 = news[1];
-    this.getLastVideoUrl(news);
+
+    // let news: News[] = this.systemService.getNews();
+    // news.sort(function(a,b){
+    //   return new Date(b.datum).getTime() - new Date(a.datum).getTime();
+    // });
+    // this.news1 = news[0];
+    // this.news2 = news[1];
+    // this.getLastVideoUrl(news);
+  }
+
+  public getLocalDateString(datum: Date): string {
+    return new Date(datum).toLocaleDateString();
   }
 
   private getLastVideoUrl(news: News[]): void {
     news.some((item: News) => {
       if (!!item.videoUrl) {
-        this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(item.videoUrl);
+        this.videoUrl = item.videoUrl;
         return true;
       }
     });

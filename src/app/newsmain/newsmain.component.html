@@ -10,7 +10,7 @@
 
         <div class="entry-attachment">
 
-          <figure class="thumbnail-attachment"><img [src]="news1.kepMainUrl" alt=""></figure>
+          <figure class="thumbnail-attachment"><img [src]="news1?.kepMainUrl" alt=""></figure>
 
         </div>
 
@@ -22,13 +22,13 @@
 
           <h6>Legfrissebb hírek</h6>
 
-          <h4 class="entry-title"><a routerLink="/content/{{news1.id}}">{{news1.cim}}</a></h4>
+          <h4 class="entry-title"><a routerLink="/content/{{news1?.id}}">{{news1?.cim}}</a></h4>
 
           <!-- - - - - - - - - - - - - - Entry Meta - - - - - - - - - - - - - - - - -->
 
           <div class="entry-meta">
 
-            <time class="entry-date">{{news1.datum.toLocaleDateString()}}</time>
+            <time class="entry-date">{{getLocalDateString(news1?.datum)}}</time>
 
           </div>
 
@@ -36,7 +36,7 @@
 
           <!-- - - - - - - - - - - - - - Entry Excerpt - - - - - - - - - - - - - - - - -->
 
-          <a routerLink="/content/{{news1.id}}" class="info-btn">Tovább a hírre...</a>
+          <a routerLink="/content/{{news1?.id}}" class="info-btn">Tovább a hírre...</a>
 
           <!-- - - - - - - - - - - - - - End of Entry Excerpt - - - - - - - - - - - - - - - - -->
 
@@ -55,7 +55,7 @@
 
         <div class="entry-attachment">
 
-          <figure class="thumbnail-attachment"><img [src]="news2.kepSecUrl" alt=""></figure>
+          <figure class="thumbnail-attachment"><img [src]="news2?.kepSecUrl" alt=""></figure>
 
         </div>
 
@@ -66,13 +66,13 @@
         <div class="entry-body">
 
 
-          <h5 class="entry-title"><a routerLink="/content/{{news2.id}}">{{news2.cim}}</a></h5>
+          <h5 class="entry-title"><a routerLink="/content/{{news2?.id}}">{{news2?.cim}}</a></h5>
 
           <!-- - - - - - - - - - - - - - Entry Meta - - - - - - - - - - - - - - - - -->
 
           <div class="entry-meta">
 
-            <time class="entry-date">{{news2.datum.toLocaleDateString()}}</time>
+            <time class="entry-date">{{getLocalDateString(news2?.datum)}}</time>
 
           </div>
 
@@ -80,7 +80,7 @@
 
           <!-- - - - - - - - - - - - - - Entry Excerpt - - - - - - - - - - - - - - - - -->
 
-          <a routerLink="/content/{{news2.id}}" class="info-btn">Tovább a hírre...</a>
+          <a routerLink="/content/{{news2?.id}}" class="info-btn">Tovább a hírre...</a>
 
           <!-- - - - - - - - - - - - - - End of Entry Excerpt - - - - - - - - - - - - - - - - -->
 
@@ -167,7 +167,7 @@
 
         <div class="responsive-iframe">
 
-          <iframe [src]="videoUrl"></iframe>
+          <iframe [src]="instaURL(videoUrl)"></iframe>
 
         </div>
 

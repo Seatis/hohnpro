@@ -6,6 +6,7 @@ import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 import {SystemService} from '../service/system.service';
 import {NewsCategoryKeys} from './news.category.keys';
 import {ActivatedRoute} from '@angular/router';
+import {RestResponse} from '../common/model/restresponse.model';
 
 @Component({
   selector: 'hohn-news',
@@ -44,7 +45,11 @@ export class NewsComponent implements OnInit {
   }
 
   public isNewsFeatured(datum: Date): boolean {
-    return new Date().getTime() - datum.getTime() < this.oneMonthOffset;
+    return new Date().getTime() - new Date(datum).getTime() < this.oneMonthOffset;
+  }
+
+  public getLocalDateString(datum: Date): string {
+    return new Date(datum).toLocaleDateString();
   }
 
   public getSafeUrl(url: string): SafeUrl {
@@ -53,10 +58,21 @@ export class NewsComponent implements OnInit {
 
   private initNews(category: string): void {
     this.convertedNews = [];
-    this. news = category === NewsCategoryKeys.ALL
-      ? this.systemService.getNews()
-      : this.systemService.getNews().filter( (news: News) => news.kategoria === category);
-    this.newsGridConverter();
+    this.systemService.getNewsAll().subscribe( (response: RestResponse<News[]>) => {
+      if (!!response.data) {
+        if (category === NewsCategoryKeys.ALL) {
+          this.news = response.data;
+        } else {
+          this.news= response.data.filter( (news: News) => news.kategoria === category);
+        }
+        this.newsGridConverter();
+      }
+    });
+
+    // this.news = category === NewsCategoryKeys.ALL
+    //   ? this.systemService.getNews()
+    //   : this.systemService.getNews().filter( (news: News) => news.kategoria === category);
+    // this.newsGridConverter();
   }
 
   private newsGridConverter(): void {
@@ -72,6 +88,7 @@ export class NewsComponent implements OnInit {
         this.convertedNews.push(row);
       }
     });
+    console.log('CONVERTED: ', this.convertedNews);
   }
 
 }

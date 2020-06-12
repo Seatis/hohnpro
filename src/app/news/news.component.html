@@ -26,28 +26,33 @@
 
     <div class="container">
 
-      <div class="events-holder type-2">
+      <div *ngIf="convertedNews.length" class="events-holder type-2">
 
 
         <div *ngFor="let row of convertedNews" class="row">
           <div *ngFor="let newsItem of row" class="col-md-6">
             <div class="event-item">
               <div class="entry-attachment">
-                <div *ngIf="!!newsItem.videoUrl; else noVideo" class="responsive-iframe">
-                  <iframe [src]="getSafeUrl(newsItem.videoUrl)"></iframe>
+                <div *ngIf="!!newsItem?.videoUrl; else noVideo" class="responsive-iframe">
+                  <iframe [src]="getSafeUrl(newsItem?.videoUrl)"></iframe>
                 </div>
-                <ng-template #noVideo><img [src]="getSafeUrl(newsItem.kepMainUrl)" alt=""></ng-template>
+                <ng-template #noVideo><img [src]="getSafeUrl(newsItem?.kepMainUrl)" alt=""></ng-template>
               </div>
               <div class="event-info">
-                <h5 class="event-link"><span *ngIf="isNewsFeatured(newsItem.datum)" class="label">Kiemelt</span><a routerLink="/content/{{newsItem.id}}">{{newsItem.cim}}</a></h5>
+                <h5 class="event-link"><span *ngIf="isNewsFeatured(newsItem?.datum)" class="label">Kiemelt</span><a routerLink="/content/{{newsItem?.id}}">{{newsItem?.cim}}</a></h5>
                 <div class="entry-meta">
-
-                  <time class="entry-date">{{newsItem.datum.toLocaleDateString()}}</time>
-                  <span class="entry-byline">Szerző: <a routerLink="/about">{{newsItem.szerzo}}</a></span>
-                  <span class="entry-cat">Kategória: <a routerLink="/news/{{newsItem.kategoria}}">{{systemService.getNewsCategoryValue(newsItem.kategoria)}}</a></span>
+                  <time class="entry-date">{{getLocalDateString(newsItem?.datum)}}</time>
+                  <ng-template [ngIf]="newsItem?.szerzo === 'Hohn Krisztina' || newsItem?.szerzo === 'Új Kezdet'" [ngIfElse]="noUrl">
+                    <span *ngIf="newsItem?.szerzo === 'Hohn Krisztina'" class="entry-byline">Szerző: <a routerLink="/about">{{newsItem?.szerzo}}</a></span>
+                    <span *ngIf="newsItem?.szerzo === 'Új Kezdet'" class="entry-byline">Szerző: <a href="https://ujkezdet.hu" target="_blank">{{newsItem?.szerzo}}</a></span>
+                  </ng-template>
+                  <ng-template #noUrl>
+                    <span class="entry-byline">Szerző: {{newsItem?.szerzo}}</span>
+                  </ng-template>
+                  <span class="entry-cat">Kategória: <a routerLink="/news/{{newsItem?.kategoria}}">{{systemService.getNewsCategoryValue(newsItem?.kategoria)}}</a></span>
                 </div>
-                <p>{{newsItem.rovidLeiras}}</p>
-                <a routerLink="/content/{{newsItem.id}}" class="info-btn">Tovább a hírre ...</a>
+                <p>{{newsItem?.rovidLeiras}}</p>
+                <a routerLink="/content/{{newsItem?.id}}" class="info-btn">Tovább a hírre ...</a>
               </div>
             </div>
           </div>

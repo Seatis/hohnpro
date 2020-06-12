@@ -8,6 +8,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Event} from '../../common/calendar/model/event.model';
 import {Events} from '../../common/calendar/events.mock';
 import {HohnUtil} from '../../common/hohn.util';
+import {RestResponse} from '../../common/model/restresponse.model';
 
 @Component({
   selector: 'hohn-news',
@@ -38,8 +39,16 @@ export class NewsitemComponent implements OnInit {
     this.route.params.subscribe(
       params => {
         if (params['id']) {
-          this.news = this.systemService.getNewsById(Number(params['id']));
-          this.initNews(Number(params['id']));
+
+          this.systemService.getNewsByID(Number(params['id'])).subscribe( (response: RestResponse<News>) => {
+            if (!!response.data) {
+              this.news = response.data;
+              this.initNews(Number(params['id']));
+            }
+          });
+
+          // this.news = this.systemService.getNewsById(Number(params['id']));
+          // this.initNews(Number(params['id']));
         }
       }
     );
@@ -49,10 +58,29 @@ export class NewsitemComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
+  public getLocalDateString(datum: Date): string {
+    return new Date(datum).toLocaleDateString();
+  }
+
   public initNews(id: number): void {
-    this.newsList = this.systemService.getNews();
-    this.nextNews = this.systemService.getNewsById(id + 1);
-    this.previousNews = this.systemService.getNewsById(id - 1);
+    // this.newsList = this.systemService.getNews();
+    this.systemService.getNewsByID(id + 1).subscribe( (response: RestResponse<News>) => {
+      if (!!response.data) {
+        this.nextNews = response.data;
+      } else {
+        this.nextNews = null;
+      }
+    });
+
+    this.systemService.getNewsByID(id - 1).subscribe( (response: RestResponse<News>) => {
+      if (!!response.data) {
+        this.previousNews = response.data;
+      } else {
+        this.previousNews = null;
+      }
+    });
+    // this.nextNews = this.systemService.getNewsById(id + 1);
+    // this.previousNews = this.systemService.getNewsById(id - 1);
   }
 
   public navigate(id: number): void {

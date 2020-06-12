@@ -5,12 +5,12 @@
   <div class="breadcrumbs-wrap with-bg">
 
     <div class="container">
-      <h1 class="page-title">{{news.cim}}</h1>
+      <h1 class="page-title">{{news?.cim}}</h1>
       <ul class="breadcrumbs">
 
         <li><a routerLink="/">Főoldal</a></li>
         <li><a routerLink="/news">Hírek</a></li>
-        <li>{{news.cim}}</li>
+        <li>{{news?.cim}}</li>
 
       </ul>
 
@@ -32,21 +32,27 @@
 <!--            <h4 class="event-link">{{news.cim}}</h4>-->
             <div class="entry-attachment">
 
-              <div *ngIf="!!news.videoUrl; else noVideo" class="responsive-iframe">
-                <iframe [src]="getSafeUrl(news.videoUrl)"></iframe>
+              <div *ngIf="!!news?.videoUrl; else noVideo" class="responsive-iframe">
+                <iframe [src]="getSafeUrl(news?.videoUrl)"></iframe>
               </div>
-              <ng-template #noVideo><img [src]="getSafeUrl(news.kepMainUrl)" alt=""></ng-template>
+              <ng-template #noVideo><img [src]="getSafeUrl(news?.kepMainUrl)" alt=""></ng-template>
 
             </div>
             <div class="event-info">
               <div class="entry-meta">
 
-                <time class="entry-date">{{news.datum.toLocaleDateString()}}</time>
-                <span class="entry-byline">Szerző: <a href="#">{{news.szerzo}}</a></span>
-                <span class="entry-cat">Kategória: <a routerLink="/news/{{news.kategoria}}">{{systemService.getNewsCategoryValue(news.kategoria)}}</a></span>
+                <time class="entry-date">{{getLocalDateString(news?.datum)}}</time>
+                <ng-template [ngIf]="news?.szerzo === 'Hohn Krisztina' || news?.szerzo === 'Új Kezdet'" [ngIfElse]="noUrl">
+                  <span *ngIf="news?.szerzo === 'Hohn Krisztina'" class="entry-byline">Szerző: <a routerLink="/about">{{news?.szerzo}}</a></span>
+                  <span *ngIf="news?.szerzo === 'Új Kezdet'" class="entry-byline">Szerző: <a href="https://ujkezdet.hu" target="_blank">{{news?.szerzo}}</a></span>
+                </ng-template>
+                <ng-template #noUrl>
+                  <span class="entry-byline">Szerző: {{news?.szerzo}}</span>
+                </ng-template>
+                <span class="entry-cat">Kategória: <a routerLink="/news/{{news?.kategoria}}">{{systemService.getNewsCategoryValue(news?.kategoria)}}</a></span>
 
               </div>
-              <div [innerHTML]="news.htmlContent"></div>
+              <div [innerHTML]="news?.htmlContent"></div>
             </div>
 
           </div>
@@ -57,15 +63,15 @@
               <div class="row">
                 <div class="col-xs-6">
                   <div *ngIf="!!previousNews">
-                    <a routerLink="/content/{{previousNews.id}}" class="info-btn prev-btn">Előző hír</a>
-                    <h6><a routerLink="/content/{{previousNews.id}}"><b>{{previousNews.cim}}</b></a></h6>
+                    <a routerLink="/content/{{previousNews?.id}}" class="info-btn prev-btn">Előző hír</a>
+                    <h6><a routerLink="/content/{{previousNews?.id}}"><b>{{previousNews?.cim}}</b></a></h6>
                   </div>
                 </div>
                 <div class="col-xs-6">
 
                   <div *ngIf="!!nextNews" class="align-right">
-                    <a routerLink="/content/{{nextNews.id}}" class="info-btn next-btn">Következő hír</a>
-                    <h6><a routerLink="/content/{{nextNews.id}}"><b>{{nextNews.cim}}</b></a></h6>
+                    <a routerLink="/content/{{nextNews?.id}}" class="info-btn next-btn">Következő hír</a>
+                    <h6><a routerLink="/content/{{nextNews?.id}}"><b>{{nextNews?.cim}}</b></a></h6>
                   </div>
 
                 </div>
