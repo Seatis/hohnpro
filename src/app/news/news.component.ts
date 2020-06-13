@@ -18,6 +18,7 @@ export class NewsComponent implements OnInit {
   public convertedNews: News[][] = [];
   private news: News[];
   private oneMonthOffset: number = 2674800000;
+  private twoWeeksOffset: number = 1209600000;
   private newsCategory: string = 'Hírek';
 
   constructor(
@@ -33,7 +34,6 @@ export class NewsComponent implements OnInit {
     this.headerService.setHeaderStyle('style-2');
     this.route.params.subscribe(
       params => {
-        console.log(params['id']);
         if (params['id']) {
           this.initNews(params['id']);
           this.newsCategory = params['id'] === 'all' ? 'Hírek' : this.systemService.getNewsCategoryValue(params['id']);
@@ -45,7 +45,7 @@ export class NewsComponent implements OnInit {
   }
 
   public isNewsFeatured(datum: Date): boolean {
-    return new Date().getTime() - new Date(datum).getTime() < this.oneMonthOffset;
+    return new Date().getTime() - new Date(datum).getTime() < this.twoWeeksOffset;
   }
 
   public getLocalDateString(datum: Date): string {
@@ -88,7 +88,6 @@ export class NewsComponent implements OnInit {
         this.convertedNews.push(row);
       }
     });
-    console.log('CONVERTED: ', this.convertedNews);
   }
 
 }
