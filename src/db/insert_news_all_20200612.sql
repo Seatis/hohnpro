@@ -186,6 +186,17 @@ INSERT INTO hohnhu_angular.hohn_news(cim, datum, htmlContent, kategoria, kepMain
     null,
     'Hohn Krisztina publicisztikája.');
 INSERT INTO hohnhu_angular.hohn_news(cim, datum, htmlContent, kategoria, kepMainUrl, kepSecUrl, szerzo, videoUrl, rovidLeiras) VALUES (
+    'A kötelező örökbefogadási tanfolyam nem lehet pártpolitikai kérdés!',
+    '2020-05-27T10:00:00',
+    '<p>A kötelező örökbefogadási tanfolyam nem lehet pártpolitikai kérdés!</p>
+      <p>Változtatni sosem késő!</p>',
+    'sajtaj',
+    'assets/images/news/general/general_1.jpg',
+    'assets/images/general/general_sec_1.jpg',
+    'Hohn Krisztina',
+    'https://www.youtube.com/embed/_mYR0CBJ9OY',
+    'Sajtótájékoztató 2020.05.27. - A kötelező örökbefogadási tanfolyam nem lehet pártpolitikai kérdés!');
+INSERT INTO hohnhu_angular.hohn_news(cim, datum, htmlContent, kategoria, kepMainUrl, kepSecUrl, szerzo, videoUrl, rovidLeiras) VALUES (
     'Romlik a szakképzésben dolgozók helyzete',
     '2020-06-03T10:00:00',
     '<p>Hohn Krisztina napirend előtti felszólalása  2020. június 3.</p>',
@@ -226,3 +237,16 @@ INSERT INTO hohnhu_angular.hohn_news(cim, datum, htmlContent, kategoria, kepMain
     'Hohn Krisztina',
     'https://www.youtube.com/embed/SlKOOXBXmX8',
     'Az ATV - Egyenes Beszéd vendégei: Hohn Krisztina országgyűlési képviselő, és Bayer Friderika énekesnő 2020.06.11.');
+INSERT INTO hohnhu_angular.hohn_news(cim, datum, htmlContent, kategoria, kepMainUrl, kepSecUrl, szerzo, videoUrl, rovidLeiras) VALUES (
+    'Rendkívüli sajtótájékoztató!',
+    '2020-06-19T10:00:00',
+    '<p>A független és ellenzéki városvezetők az önkormányzatok kivéreztetése ellen akartak felszólalni az ülésen, de a kormányzati többség leszavazta, hogy elmondhassák véleményüket.</p>
+     <p>A mai közös sajtótájékoztatón én is felszólaltam.</p>
+     <p>A tájékoztatóról bővebben itt olvashat:</p>
+     <p><a href="https://magyarhang.org/belfold/2020/06/17/parttitkarokra-tanacselnokokre-epulo-rendszer-alakul-ki/">https://magyarhang.org/belfold/2020/06/17/parttitkarokra-tanacselnokokre-epulo-rendszer-alakul-ki/</a></p>',
+    'sajtaj',
+    'assets/images/news/general/general_sajtaj.jpg',
+    'assets/images/news/general/general_sajtaj_sec.jpg',
+    'Hohn Krisztina',
+    'https://www.youtube.com/embed/LZ0YWJbF7Bs',
+    'Rendkívüli sajtótájékozató! - 2020.06.17.');
