@@ -1,5 +1,6 @@
 .hohnimg {
-  background-image: url(assets/images/hohn_1920x1050_bg1.png);
+  /* background-image: url(assets/images/hohn_1920x1050_bg1.png); */
+  background-image: url(assets/images/bg/hohn_bg_2020.png);
   background-size: cover;
 }
 
@@ -11,7 +12,8 @@
 
 @media screen and (max-width: 767px) {
   .hohnimg {
-    background-image: url(assets/images/bg/hohn_bg_mobile.jpg);
+    /* background-image: url(assets/images/bg/hohn_bg_mobile.jpg); */
+    background-image: url(assets/images/bg/hohn_bg_2020_mobile.png);
     background-size: cover;
   }
   .intro h1 {
