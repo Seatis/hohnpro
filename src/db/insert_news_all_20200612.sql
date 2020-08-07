@@ -76,7 +76,7 @@ INSERT INTO hohnhu_angular.hohn_news(cim, datum, htmlContent, kategoria, kepMain
     '2020-04-24T10:00:00',
     '<p>Hogyan menti meg a szegényeket a kormány az uzsorásoktól járvány idején?</p>
       <p>Hohn Krisztina azonnali kérdése 2020. ápr. 20.</p>
-      <p><a href="https://facebook.com/ujkezdet.hu/posts/1090310091348575">https://facebook.com/ujkezdet.hu/posts/1090310091348575</a></p',
+      <p><a href="https://facebook.com/ujkezdet.hu/posts/1090310091348575">https://facebook.com/ujkezdet.hu/posts/1090310091348575</a></p>',
     'parlament',
     'assets/images/news/20200424/202004241000.jpg',
     'assets/images/news/20200424/202004241000_sec.jpg',
