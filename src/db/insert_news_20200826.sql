@@ -11,5 +11,5 @@ INSERT INTO hohnhu_angular.hohn_news(cim, datum, htmlContent, kategoria, kepMain
     'assets/images/news/20200826/20200826.jpg',
     'assets/images/news/20200826/20200826_sec.jpg',
     'Hohn Krisztina',
-    null,
+    'https://www.youtube.com/embed/aVFPAJg2XpM',
     'Törvénymódosító javaslatokkal próbáljuk megakadályozni a települések tönkretételét.');
