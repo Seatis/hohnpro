@@ -23,7 +23,7 @@ INSERT INTO hohnhu_angular.hohn_news(cim, datum, htmlContent, kategoria, kepMain
     'Hohn Krisztina (Új Kezdet elnök) felszólalása a szülők helyzetéről.');
 INSERT INTO hohnhu_angular.hohn_news(cim, datum, htmlContent, kategoria, kepMainUrl, kepSecUrl, szerzo, videoUrl, rovidLeiras) VALUES (
     'Nem elég a törvényeket szigorítani, az áldozatokat segítő ellátó rendszert is fejleszteni kell!',
-    '2020-10-18T18:00:00',
+    '2020-10-08T18:00:00',
     '<p>Hohn Krisztina (Új Kezdet elnök) felszólalása az az áldozatokat segítő ellátó rendszerrel kapcsolatban.</p>',
     'parlament',
     'assets/images/news/general/general_3.jpg',
