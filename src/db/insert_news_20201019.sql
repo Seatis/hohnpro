@@ -12,4 +12,4 @@ INSERT INTO hohnhu_angular.hohn_news(cim, datum, htmlContent, kategoria, kepMain
     'assets/images/news/general/general_sec_2.jpg',
     'Hohn Krisztina',
     'https://www.youtube.com/embed/D9d5aTm4CMQ',
-    'ohn Krisztina azonnali kérdése - 2020. okt. 12.');
+    'Hohn Krisztina azonnali kérdése - 2020. okt. 12.');
