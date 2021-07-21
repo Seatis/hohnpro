@@ -64,6 +64,12 @@
 
       <hohn-action></hohn-action>
 
+      <div class="align-center test-button">
+        <p-button *ngIf="isEnabledTestButton" label="Felugró ablak teszt" (onClick)="enablePopUp()"></p-button>
+      </div>
+
+
+
       <div id="hohnaction" class="page-section">
 
         <div class="container">
@@ -123,3 +129,91 @@
   <!-- </div> -->
 
   <!-- - - - - - - - - - - - end Wrapper - - - - - - - - - - - - - - -->
+
+  <p-dialog header="Jelentkezz aktivista csapatunkba!" [(visible)]="showPopUp" [modal]="true">
+    <div class="wrap-login100 p-l-50 p-r-50 p-t-50 p-b-50">
+      <form class="login100-form validate-form" [formGroup]="aktivistaForm">
+
+        <div class="wrap-input100 validate-input" data-validate="Name is required">
+          <label class="label-input100 required">Név</label>
+          <input
+            class="input100"
+            type="text"
+            name="nev"
+            placeholder="Név..."
+            formControlName="nev"
+            [required]="true"
+          >
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Username is required">
+          <label class="label-input100 required">Cím</label>
+          <input
+            class="input100"
+            type="text"
+            name="cim"
+            placeholder="Cím..."
+            formControlName="cim"
+            [required]="true"
+          >
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Username is required">
+          <label class="label-input100 required">Email-cím</label>
+          <input
+            class="input100"
+            type="email"
+            name="email"
+            [email]="true"
+            placeholder="Email-cím..."
+            formControlName="email"
+            [required]="true"
+            [ngClass]="aktivistaForm.controls.email.invalid && aktivistaForm.controls.email.value ? 'invalid' : ''"
+          >
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Password is required">
+          <label class="label-input100 required">Telefonszám</label>
+          <input
+            class="input100"
+            type="text"
+            name="telefonszam"
+            placeholder="Telefonszám..."
+            formControlName="telefonszam"
+            [required]="true"
+            maxlength="12"
+            [ngClass]="aktivistaForm.controls.telefonszam.invalid && aktivistaForm.controls.telefonszam.value ? 'invalid' : ''"
+          >
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100" data-validate="Username is required">
+          <label class="label-input100">Miben tudok segíteni?</label>
+          <input
+            class="input100"
+            type="text"
+            name="reszletek"
+            placeholder="Miben tudok segíteni..."
+            formControlName="reszletek"
+            [required]="false"
+          >
+          <span class="focus-input100"></span>
+        </div>
+        <div class="akt-button-area">
+          <button class="btn btn-style-6 btn-small" (click)="postForm()">Jelentkezem</button>
+        </div>
+<!--        <div class="container-login100-form-btn">-->
+<!--          <div class="wrap-login100-form-btn">-->
+<!--            <div class="login100-form-bgbtn"></div>-->
+<!--            <button class="login100-form-btn" (click)="postForm()">-->
+<!--              Jelentkezem-->
+<!--            </button>-->
+<!--          </div>-->
+<!--        </div>-->
+
+      </form>
+    </div>
+  </p-dialog>

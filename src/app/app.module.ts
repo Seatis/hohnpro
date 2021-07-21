@@ -36,6 +36,10 @@ import {EventfeedComponent} from './common/eventfeed/eventfeed.component';
 import {SupportComponent} from './common/support/support.component';
 import {ContactComponent} from './contact/contact.component';
 import {FacebookComponent} from './common/facebook/facebook.component';
+import {DialogModule} from 'primeng/dialog';
+import {ButtonModule} from 'primeng/button';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 
 @NgModule({
   declarations: [
@@ -70,7 +74,11 @@ import {FacebookComponent} from './common/facebook/facebook.component';
     ProgressSpinnerModule,
     DropdownModule,
     TooltipModule,
-    ToastModule
+    ToastModule,
+    DialogModule,
+    ButtonModule,
+    MessagesModule,
+    MessageModule
 
   ],
   providers: [HeaderService, DynamicScriptLoaderService, TokenService, SystemService, NewsletterService, MessageService],

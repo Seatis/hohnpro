@@ -2564,6 +2564,12 @@ button.search-button:hover,
     letter-spacing: 1.2px;
   }
 
+.btn-medium{
+  padding: 11px 25px;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+}
+
   [class*="btn"] i{
     font-size: 18px;
     margin-right: 10px;
@@ -2579,6 +2585,10 @@ button.search-button:hover,
   .btn-big i{
     font-size: 20px;
   }
+
+.btn-medium i{
+  font-size: 18px;
+}
 
   [class*="btn"].btn-style-2{
     background: #fff;
