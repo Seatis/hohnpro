@@ -40,6 +40,10 @@
           Ember lenni mindég, minden körülményben. "</p>
         <p style="text-align: left">Arany János</p>
 
+        <div *ngIf="isEnabledTestButton" class="align-center test-button">
+          <p-button id="popupbut" label="Felugró ablak teszt" (onClick)="enablePopUp()"></p-button>
+        </div>
+
 <!--        <div class="join-us">-->
 <!--          <p>Hírlevél</p>-->
 <!--          <form class="join-form">-->
@@ -58,15 +62,15 @@
 
     <!-- - - - - - - - - - - - - - Content - - - - - - - - - - - - - - - - -->
 
+
+
     <div id="content" *ngIf="tokenService.loaded">
 
       <!-- actions -->
 
       <hohn-action></hohn-action>
 
-      <div class="align-center test-button">
-        <p-button *ngIf="isEnabledTestButton" label="Felugró ablak teszt" (onClick)="enablePopUp()"></p-button>
-      </div>
+
 
 
 

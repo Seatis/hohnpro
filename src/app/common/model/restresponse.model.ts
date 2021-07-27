@@ -1,5 +1,5 @@
-export interface RestResponse<T> {
-  status: string;
-  error?: string
+import {PostResponse} from './postresponse.model';
+
+export interface RestResponse<T> extends PostResponse {
   data?: T;
 }

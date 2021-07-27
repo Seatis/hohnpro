@@ -2,9 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {HeaderService} from '../service/header.service';
 import {TokenService} from '../service/token.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {AppValidators} from '../utils/validators.utils';
 import {ActivatedRoute} from '@angular/router';
 import {MessageService} from 'primeng/api';
+import {AktivistaModel} from './model/aktivista.model';
+import {SystemService} from '../service/system.service';
+import {PostResponse} from '../common/model/postresponse.model';
 
 @Component({
   selector: 'hohn-index',
@@ -18,8 +20,15 @@ export class IndexComponent implements OnInit {
 
   public isEnabledTestButton: boolean = false;
 
-  constructor(private headerService: HeaderService, public tokenService: TokenService, private formBuilder: FormBuilder, private route: ActivatedRoute, private messageService: MessageService) {
+  private aktivistaModel: AktivistaModel;
 
+  constructor(
+    private headerService: HeaderService,
+    public tokenService: TokenService,
+    private formBuilder: FormBuilder,
+    private route: ActivatedRoute,
+    private messageService: MessageService,
+    private systemService: SystemService) {
   }
 
   public ngOnInit(): void {
@@ -50,6 +59,22 @@ export class IndexComponent implements OnInit {
   public postForm(): void {
     if (this.checkValidForm()) {
       console.log(this.aktivistaForm.value);
+      this.aktivistaModel = <AktivistaModel> this.aktivistaForm.value;
+      this.aktivistaModel.datum = new Date().toLocaleString();
+      if (!!this.aktivistaForm.get('reszletek') && !this.aktivistaForm.get('reszletek').value) {
+        this.aktivistaModel.reszletek = 'Nem töltötte ki! (rendszerüzenet)';
+      }
+      const body: string = JSON.stringify(this.aktivistaModel);
+      this.systemService.postAktivistaForm(body).subscribe((response: PostResponse) => {
+        if (!response.error) {
+          this.messageService.add({severity: 'success', summary: 'Köszönjük!', detail: 'Jelentkezését fogadtuk, munkatársunk keresni fogja.'});
+          this.aktivistaForm.reset();
+        } else {
+          this.messageService.add({severity: 'error', summary: 'Sikertelen!', detail: 'A jelentkezése háttérrendszeri hiba miatt nem valósult meg, kérem próbálja újra később!'});
+        }
+        console.log(response);
+        this.showPopUp = false;
+      });
     }
   }
 
