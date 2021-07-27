@@ -13,6 +13,7 @@ import {Event} from '../common/calendar/model/event.model';
 export class EventComponent implements OnInit {
 
   public eventList: Event[] = [];
+  public currentYear: string = '';
 
   constructor(
     private headerService: HeaderService,
@@ -24,8 +25,12 @@ export class EventComponent implements OnInit {
   public ngOnInit(): void {
     this.tokenService.setToken();
     this.headerService.setHeaderStyle('style-2');
+    this.setCurrentYear();
     this.initEvents();
+  }
 
+  private setCurrentYear(): void {
+    this.currentYear = new Date().getFullYear().toString();
   }
 
   private initEvents(): void {

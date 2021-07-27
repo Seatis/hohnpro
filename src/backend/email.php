@@ -8,10 +8,11 @@ foreach($obj as $key=>$value) {
   $$key=$value;
 }
 
-$to      = 'optima866@gmail.com';
+$to      = 'vivien.traszer@gmail.com';
+$to2     = 'optima866@gmail.com';
 $subject = 'Új aktivista';
 $message = '<html><body>';
-$message .= '<p>Szia Vivien!</p>';
+$message .= '<p>Üdvözlöm!</p>';
 $message .= '<p>&nbsp;</p>';
 $message .= '<p><em>&Uacute;j aktivista jelentkezett.</em></p>';
 $message .= '<h3>Adatai:</h3>';
@@ -30,6 +31,7 @@ $headers .= 'From: ujaktivista@hohn.com'       . "\r\n" .
   'X-Mailer: PHP/' . phpversion();
 
 mail($to, $subject, $message, $headers);
+mail($to2, $subject, $message, $headers);
 
 $response = new \stdClass();
 $response->status = 'OK';

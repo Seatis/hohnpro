@@ -3,7 +3,7 @@ import {Event} from './model/event.model';
 export const Events: Event[] = [
   // {
   //   id: 1,
-  //   datum: new Date('2020-05-20T22:00:00'),
+  //   datum: new Date('2021-07-29T22:00:00'),
   //   cim: 'Nyilvános vita a levegőtisztaság ügyében',
   //   url: '/event',
   //   hely: '1358 Bp, Széchenyi rkp. 19.',
@@ -13,7 +13,7 @@ export const Events: Event[] = [
   // },
   // {
   //   id: 2,
-  //   datum: new Date('2020-05-28T22:00:00'),
+  //   datum: new Date('2021-08-01T22:00:00'),
   //   cim: 'Jótékonysági est',
   //   url: '/event',
   //   hely: '1095 Bp, Komor Marcell u. 1.',
@@ -23,7 +23,7 @@ export const Events: Event[] = [
   // },
   // {
   //   id: 3,
-  //   datum: new Date('2020-04-30T22:00:00'),
+  //   datum: new Date('2021-08-16T22:00:00'),
   //   cim: 'Rossz Event',
   //   url: '/event',
   //   hely: '1095 Bp, Komor Marcell u. 1.',

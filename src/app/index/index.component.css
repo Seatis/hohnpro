@@ -594,3 +594,13 @@ iframe {
   margin-left: auto;
   margin-right: auto;
 }
+
+:host ::ng-deep #aktivista img {
+  width: 100%;
+  max-width: 900px;
+  cursor: pointer;
+}
+
+:host ::ng-deep #aktivista {
+  padding-bottom: 50px;
+}
