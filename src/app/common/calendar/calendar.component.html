@@ -20,7 +20,7 @@
             <tr *ngFor="let eventRow of calendarData.monthData | keyvalue">
               <td *ngFor="let event of eventRow.value" [ngClass]="event.url ? 'link' : ''">
                 <ng-template [ngIf]="event.url" [ngIfElse]="noUrl">
-                    <a [routerLink]="event.url">{{event.day}}</a>
+                    <a [routerLink]="event.url" [title]="event.tooltip">{{event.day}}</a>
                   </ng-template>
 
                   <ng-template #noUrl>
