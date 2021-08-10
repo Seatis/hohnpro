@@ -41,6 +41,10 @@ export class CalendarComponent implements OnInit {
                 let urlTmp: string = null;
                 let tooltipTmp: string = null;
                 this.events.forEach( (event: Event) => {
+                  let minutes: string = event.datum.getMinutes().toString();
+                  if (minutes === '0') {
+                    minutes += '0';
+                  }
                     if (
                       event.datum.getFullYear() === currentDate.getFullYear() &&
                       event.datum.getMonth() === currentDate.getMonth() &&
@@ -48,7 +52,7 @@ export class CalendarComponent implements OnInit {
                     ) {
                         dateTmp = event.datum;
                         urlTmp = event.url;
-                        tooltipTmp = event.cim;
+                        tooltipTmp = event.cim + ' - ' + event.datum.toLocaleDateString() + ' ' + event.datum.getHours() + ':' + minutes;
                     }
                 });
                 calendarDataRow.push(<CalendarEvent>{
