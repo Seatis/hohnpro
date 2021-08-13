@@ -595,12 +595,16 @@ iframe {
   margin-right: auto;
 }
 
-:host ::ng-deep #aktivista img {
+:host ::ng-deep #aktivista img, :host ::ng-deep #tamogass img {
   width: 100%;
   max-width: 900px;
   cursor: pointer;
 }
 
-:host ::ng-deep #aktivista {
+:host ::ng-deep #aktivista, :host ::ng-deep #tamogass {
   padding-bottom: 50px;
+}
+
+h2.connect-title {
+  cursor: pointer;
 }

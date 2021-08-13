@@ -52,8 +52,12 @@ export class IndexComponent implements OnInit {
     );
   }
 
-  public enablePopUp(): void {
-    this.showPopUp = true;
+  public openAktivista(): void {
+    window.open("https://lmp.hu/hohncsapat/")
+  }
+
+  public openTamogass(): void {
+    window.open("https://lmp.hu/tamogassahohnkrisztinat/")
   }
 
   public postForm(): void {
