@@ -2,6 +2,10 @@
   /* color: crimson; */
 }
 
-:host ::ng-deep #header.clone-fixed.slideDown ul li a {
+:host ::ng-deep #header.clone-fixed.slideDown ul li a span.main-nav-text {
+  color: #fff !important;
+}
+
+:host ::ng-deep #header.style-2 ul li a span.main-nav-text {
   color: #fff !important;
 }
