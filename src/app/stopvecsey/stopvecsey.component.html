@@ -1,0 +1,167 @@
+<div id="content" *ngIf="tokenService.loaded">
+
+  <!-- - - - - - - - - - - - - - Breadcrumbs - - - - - - - - - - - - - - - - -->
+
+  <div class="breadcrumbs-wrap with-bg">
+
+    <div class="container">
+
+      <h1 class="page-title">Stop Orbán! Stop Vécsey!</h1>
+
+      <ul class="breadcrumbs">
+
+        <li><a routerLink="/">Főoldal</a></li>
+        <li>Stop Orbán! Stop Vécsey!</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <!-- - - - - - - - - - - - - end Breadcrumbs - - - - - - - - - - - - - - - -->
+
+  <div class="page-content-wrap">
+
+    <div class="container">
+
+      <div class="row">
+        <main id="main" class="col-md-8 col-sm-12">
+
+
+
+          <div class="content-element3">
+
+<!--            <h3>Hohn Krisztina országgyűlési képviselő</h3>-->
+<!--            -->
+
+            <p style="text-align: justify">
+              Ha Ön szerint is le kell váltani a Fideszt, mert a körzet képviselője nem látta el megfelelően a feladatát, akkor <strong>írja alá petíciómat!</strong> Stop Orbán! Stop Vécsey!
+              <br />
+              <span>Az aláíráshoz mindössze az alábbi űrlap kitöltésére és beküldésére van szükség az Ön részéről.</span><br />
+              <em>Kérem, görgessen lejjebb az űrlap kitöltéséhez!</em>
+            </p>
+
+          </div>
+
+          <div class="content-element3">
+            <img src="assets/images/site/stopvecsey_hohnweb-20.jpg" alt="">
+          </div>
+
+          <div class="content-element3">
+            <div class="wrap-login100 p-l-50 p-r-50 p-t-50 p-b-50">
+              <form class="login100-form validate-form" [formGroup]="aktivistaForm">
+
+                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                  <label class="label-input100 required">Név</label>
+                  <input
+                    class="input100"
+                    type="text"
+                    name="nev"
+                    placeholder="Név..."
+                    formControlName="nev"
+                    [required]="true"
+                  >
+                  <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Username is required">
+                  <label class="label-input100 required">Irányítószám</label>
+                  <input
+                    class="input100"
+                    type="text"
+                    name="iranyitoszam"
+                    placeholder="Irányítószám..."
+                    formControlName="iranyitoszam"
+                    maxlength="4"
+                    [required]="true"
+                    [ngClass]="aktivistaForm.controls.iranyitoszam.invalid && aktivistaForm.controls.iranyitoszam.value ? 'invalid' : ''"
+                  >
+                  <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Username is required">
+                  <label class="label-input100 required">Település</label>
+                  <input
+                    class="input100"
+                    type="text"
+                    name="telepules"
+                    placeholder="Település..."
+                    formControlName="telepules"
+                    [required]="true"
+                  >
+                  <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Username is required">
+                  <label class="label-input100 required">Utca, házszám</label>
+                  <input
+                    class="input100"
+                    type="text"
+                    name="cim"
+                    placeholder="Utca, házszám..."
+                    formControlName="cim"
+                    [required]="true"
+                  >
+                  <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Username is required">
+                  <label class="label-input100 required">Email-cím</label>
+                  <input
+                    class="input100"
+                    type="email"
+                    name="email"
+                    [email]="true"
+                    placeholder="Email-cím..."
+                    formControlName="email"
+                    [required]="true"
+                    [ngClass]="aktivistaForm.controls.email.invalid && aktivistaForm.controls.email.value ? 'invalid' : ''"
+                  >
+                  <span class="focus-input100"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                  <label class="label-input100 required">Telefonszám</label>
+                  <input
+                    class="input100"
+                    type="text"
+                    name="telefonszam"
+                    placeholder="Telefonszám..."
+                    formControlName="telefonszam"
+                    [required]="true"
+                    maxlength="12"
+                    [ngClass]="aktivistaForm.controls.telefonszam.invalid && aktivistaForm.controls.telefonszam.value ? 'invalid' : ''"
+                  >
+                  <span class="focus-input100"></span>
+                </div>
+
+
+                <div class="akt-button-area">
+                  <button class="btn btn-style-6 btn-small" (click)="postForm()">Beküldöm</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+
+          <div class="share-wrap">
+            <span class="share-title">Megosztás:</span>
+            <ul class="social-icons share">
+              <li><a href="{{facebookUrl}}" class="sh-facebook"><i class="icon-facebook"></i>Facebook</a></li>
+              <li><a href="{{instaHomeUrl}}" class="sh-google"><i class="icon-gplus-3"></i>Instagram</a></li>
+            </ul>
+          </div>
+        </main>
+        <aside id="sidebar" class="col-md-4 col-sm-12">
+          <hohn-facebook></hohn-facebook>
+          <hohn-instafeed [feedUrl]="instaUrl"></hohn-instafeed>
+        </aside>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

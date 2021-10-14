@@ -40,6 +40,7 @@ import {DialogModule} from 'primeng/dialog';
 import {ButtonModule} from 'primeng/button';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
+import {StopvecseyComponent} from './stopvecsey/stopvecsey.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import {MessageModule} from 'primeng/message';
     EventfeedComponent,
     SupportComponent,
     ContactComponent,
-    FacebookComponent
+    FacebookComponent,
+    StopvecseyComponent
   ],
   imports: [
     BrowserModule,
