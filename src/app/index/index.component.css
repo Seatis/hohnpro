@@ -608,3 +608,11 @@ iframe {
 h2.connect-title {
   cursor: pointer;
 }
+
+:host ::ng-deep div.szavazo-helyszinek {
+  margin-top: 15px;
+}
+
+:host ::ng-deep div.szavazo-helyszinek a {
+  font-size: 1.5em;
+}
