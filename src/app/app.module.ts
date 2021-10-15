@@ -41,6 +41,7 @@ import {ButtonModule} from 'primeng/button';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {StopvecseyComponent} from './stopvecsey/stopvecsey.component';
+import {CheckboxModule} from 'primeng/checkbox';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import {StopvecseyComponent} from './stopvecsey/stopvecsey.component';
     DialogModule,
     ButtonModule,
     MessagesModule,
-    MessageModule
+    MessageModule,
+    CheckboxModule
 
   ],
   providers: [HeaderService, DynamicScriptLoaderService, TokenService, SystemService, NewsletterService, MessageService],

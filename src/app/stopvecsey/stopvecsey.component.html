@@ -137,7 +137,27 @@
                 </div>
 
 
-                <div class="akt-button-area">
+                  <div class="akt-button-area">
+                    <a href="https://lehetmas.hu/adatvedelmi-tajekoztato/" target="_blank">Az adatkezelési tájékoztató megtekintéséhez kérem, kattintson ide!</a>
+                  </div>
+
+
+<!--                  <div class="row adatkezeles-area">-->
+<!--                    <div class="col-md-1">-->
+<!--                      <p-checkbox id="binary" [(ngModel)]="checked" binary="true" inputId="binary" name="adatvedelem" formControlName="adatvedelem"></p-checkbox>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-11 adatkezeles-label-area">-->
+<!--                      <label for="binary">Az adatkezelési tájékoztatót elolvastam, egyetértek annak tartalmával.</label>-->
+<!--                    </div>-->
+<!--                  </div>-->
+
+                <ul class="social-icons share adatkezeles-area">
+                  <li class="chbox-li"><p-checkbox id="binary" [(ngModel)]="checked" binary="true" inputId="binary" name="adatvedelem" formControlName="adatvedelem" [required]="true"></p-checkbox></li>
+                  <li class="adatkezeles-li"><label for="binary">Az adatkezelési tájékoztató tartalmát elfogadom.</label></li>
+                </ul>
+
+
+                <div style="margin-top: 30px;" class="akt-button-area">
                   <button class="btn btn-style-6 btn-small" (click)="postForm()">Beküldöm</button>
                 </div>
 

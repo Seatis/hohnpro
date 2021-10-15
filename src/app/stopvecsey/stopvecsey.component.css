@@ -621,3 +621,39 @@ h2.connect-title {
 :host ::ng-deep div.szavazo-helyszinek a {
   font-size: 1.5em;
 }
+
+:host ::ng-deep div.adatkezeles-label-area {
+  margin-left: -15px;
+}
+
+:host ::ng-deep ul.adatkezeles-area li.adatkezeles-li {
+  margin-left: 15px;
+  margin-top: 5px
+}
+
+@media only screen and (max-width: 520px) {
+  ul.adatkezeles-area li.chbox-li {
+    width: 20px;
+  }
+  ul.adatkezeles-area li.adatkezeles-li {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  ul.adatkezeles-area li.chbox-li {
+    width: 20px;
+  }
+  ul.adatkezeles-area li.adatkezeles-li {
+    width: 275px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  ul.adatkezeles-area li.chbox-li {
+    width: 20px;
+  }
+  ul.adatkezeles-area li.adatkezeles-li {
+    width: 200px;
+  }
+}

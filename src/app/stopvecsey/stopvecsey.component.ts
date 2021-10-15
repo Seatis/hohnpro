@@ -23,6 +23,8 @@ export class StopvecseyComponent implements OnInit {
   public instaUrl: string = HohnUtil.getInstaUrl();
   public instaHomeUrl: string = HohnUtil.getInstaHomeUrl();
 
+  public checked: boolean = false;
+
   public aktivistaForm: FormGroup;
   private aktivistaModel: AktivistaModel;
 
@@ -55,7 +57,8 @@ export class StopvecseyComponent implements OnInit {
       'telepules': [''],
       'cim': [''],
       'email': [''],
-      'telefonszam': ['', [Validators.required, Validators.pattern('^[\+]?[0-9\-/ ()]*')]]
+      'telefonszam': ['', [Validators.required, Validators.pattern('^[\+]?[0-9\-/ ()]*')]],
+      'adatvedelem': false
     });
 
 
@@ -95,6 +98,9 @@ export class StopvecseyComponent implements OnInit {
       return false;
     } else if (this.aktivistaForm.invalid) {
       this.messageService.add({severity: 'error', summary: 'Figyelem!', detail: 'A csillaggal jelölt mezők kitöltése kötelező!'});
+      return false;
+    } else if (!this.aktivistaForm.controls.adatvedelem.value) {
+      this.messageService.add({severity: 'error', summary: 'Figyelem!', detail: 'Az adatvédelmi tájékoztató elfogadása kötelező!'});
       return false;
     } else {
       return true;
