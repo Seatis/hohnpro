@@ -605,6 +605,16 @@ iframe {
   padding-bottom: 50px;
 }
 
+:host ::ng-deep #aktivista img, :host ::ng-deep #stopvecsey img {
+  width: 100%;
+  max-width: 900px;
+  cursor: pointer;
+}
+
+:host ::ng-deep #aktivista, :host ::ng-deep #stopvecsey {
+  padding-bottom: 50px;
+}
+
 h2.connect-title {
   cursor: pointer;
 }

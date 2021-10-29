@@ -9,7 +9,7 @@ foreach($obj as $key=>$value) {
 }
 
 //$to      = 'vivien.traszer@gmail.com';
-$to      = 'optima866@gmail.com';
+$to      = 'hohnkrisztina@lehetmas.hu';
 //$to2     = 'optima866@gmail.com';
 $subject = 'Új aláírás - Stop Orbán! Stop Vécsey!';
 $message = '<html><body>';

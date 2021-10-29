@@ -39,16 +39,18 @@ export class StopvecseyComponent implements OnInit {
   ) {}
 
   public ngOnInit(): void {
-    this.route.queryParams.subscribe(
-      params => {
-        if (params['id'] !== 'stopvecseytest789') {
-          this.router.navigate(['/']);
-        } else {
-          this.tokenService.setToken();
-          this.headerService.setHeaderStyle('style-2');
-        }
-      }
-    );
+    this.tokenService.setToken();
+    this.headerService.setHeaderStyle('style-2');
+    // this.route.queryParams.subscribe(
+    //   params => {
+    //     if (params['id'] !== 'stopvecseytest789') {
+    //       this.router.navigate(['/']);
+    //     } else {
+    //       this.tokenService.setToken();
+    //       this.headerService.setHeaderStyle('style-2');
+    //     }
+    //   }
+    // );
 
 
     this.aktivistaForm = this.formBuilder.group({
