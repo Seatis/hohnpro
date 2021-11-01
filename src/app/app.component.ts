@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
+import { NgcCookieConsentService } from 'ngx-cookieconsent';
 
 // declare var $:any;
 
@@ -14,7 +15,8 @@ import 'rxjs/add/operator/map';
 export class AppComponent implements OnInit {
 
   constructor(private router: Router,
-              private activatedRoute: ActivatedRoute) { }
+              private activatedRoute: ActivatedRoute,
+              private ccService: NgcCookieConsentService) { }
 
   public ngOnInit(): void {
     // this.router.events

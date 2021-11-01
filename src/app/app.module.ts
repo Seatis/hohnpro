@@ -42,6 +42,43 @@ import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {StopvecseyComponent} from './stopvecsey/stopvecsey.component';
 import {CheckboxModule} from 'primeng/checkbox';
+import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
+import {environment} from '../environments/environment';
+
+// Beállítás:
+// https://tinesoft.github.io/ngx-cookieconsent/home
+// https://github.com/tinesoft/ngx-cookieconsent
+
+const cookieConfig:NgcCookieConsentConfig = {
+  cookie: {
+    domain: environment.cookieDomain // or 'your.domain.com' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
+  },
+  position: 'bottom-left',
+  theme: 'block',
+  palette: {
+    popup: {
+      background: '#0d2f5d',
+      text: '#ffffff',
+      link: '#ffffff'
+    },
+    button: {
+      background: '#af0c39',
+      text: '#ffffff',
+      border: 'transparent'
+    }
+  },
+  content: {
+    message: 'Ez a weboldal a felhasználói élmény javítása, valamint a zavartalan működés biztosítása érdekében sütiket (cookie-kat) használ.',
+    dismiss: 'Megértettem',
+    deny: 'Refuse cookies',
+    link: '',
+    //link: 'További információk',
+    href: '',
+    //href: 'https://lehetmas.hu/suti-cookie-szabalyzat/',
+    policy: 'Adatkezelés'
+  },
+  type: 'info'
+};
 
 @NgModule({
   declarations: [
@@ -82,7 +119,8 @@ import {CheckboxModule} from 'primeng/checkbox';
     ButtonModule,
     MessagesModule,
     MessageModule,
-    CheckboxModule
+    CheckboxModule,
+    NgcCookieConsentModule.forRoot(cookieConfig)
 
   ],
   providers: [HeaderService, DynamicScriptLoaderService, TokenService, SystemService, NewsletterService, MessageService],

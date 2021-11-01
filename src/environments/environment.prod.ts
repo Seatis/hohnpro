@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  serverUrl: 'backend/'
+  serverUrl: 'backend/',
+  cookieDomain: 'hohn.hu'
 };
