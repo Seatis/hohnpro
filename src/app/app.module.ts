@@ -71,9 +71,9 @@ const cookieConfig:NgcCookieConsentConfig = {
     message: 'Ez a weboldal a felhasználói élmény javítása, valamint a zavartalan működés biztosítása érdekében sütiket (cookie-kat) használ.',
     dismiss: 'Megértettem',
     deny: 'Refuse cookies',
-    link: '',
+    link: 'Adatvédelmi tájékoztató',
     //link: 'További információk',
-    href: '',
+    href: 'assets/pdf/hohn_adatvedelmi_tajekoztato_2021.pdf',
     //href: 'https://lehetmas.hu/suti-cookie-szabalyzat/',
     policy: 'Adatkezelés'
   },
