@@ -53,7 +53,7 @@ export class IndexComponent implements OnInit {
   }
 
   public openAktivista(): void {
-    window.open("https://lmp.hu/hohncsapat/")
+    window.open(" https://www.20k.hu/jelentkezz/")
   }
 
   public openTamogass(): void {

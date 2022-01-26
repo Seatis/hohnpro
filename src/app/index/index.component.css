@@ -605,7 +605,13 @@ iframe {
   padding-bottom: 50px;
 }
 
-:host ::ng-deep #aktivista img, :host ::ng-deep #stopvecsey img {
+:host ::ng-deep #aktivista img {
+  width: 100%;
+  max-width: 635px;
+  cursor: pointer;
+}
+
+:host ::ng-deep #stopvecsey img {
   width: 100%;
   max-width: 900px;
   cursor: pointer;
@@ -625,4 +631,10 @@ h2.connect-title {
 
 :host ::ng-deep div.szavazo-helyszinek a {
   font-size: 1.5em;
+}
+
+@media (max-width: 576px) {
+  :host ::ng-deep #aktivista h2 {
+    font-size: 2.1em;
+  }
 }
