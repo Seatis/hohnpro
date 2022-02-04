@@ -36,8 +36,18 @@
         </div>
 
         <ng-template #noEvent>
-          <div class="events-holder">
 
+          <div class="events-holder">
+            <p-dropdown
+              [options]="telepulesLista"
+              [(ngModel)]="selectedTelepules"
+              placeholder="Válasszon települést a lista szűkítéséhez"
+              [filter]=true
+              (onChange)="change($event.value)"
+              optionLabel="label"
+              [showClear]="true"
+            >
+            </p-dropdown>
             <div *ngFor="let event of eventList" class="event-item">
 
               <div class="row">
@@ -57,7 +67,7 @@
                       <!--                    <h6 class="event-price f-right"><b>$15</b></h6>-->
                     </div>
                     <div class="event-desc">
-                      <time datetime="2018-07-25">{{event.datum.toLocaleDateString()}}</time> &nbsp; |  &nbsp; {{event.idopont}} <br>
+                      <time datetime="2018-07-25">{{event.datum.toLocaleDateString() + ' ' + days[event.datum.getDay()]}}</time> &nbsp; |  &nbsp; {{event.idopont}} <br>
                       {{event.hely}}
                     </div>
                     <div [innerHTML]="event.htmlContent"></div>

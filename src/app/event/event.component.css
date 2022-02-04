@@ -3,3 +3,15 @@ div.sator-helyszinek {
   margin-bottom: 20px;
   font-size: 18px;
 }
+
+:host ::ng-deep p-dropdown > div {
+  margin-bottom: 30px;
+  margin-top: 10px;
+  width: 30%;
+}
+
+@media only screen and (max-width: 520px) {
+  :host ::ng-deep p-dropdown > div {
+    width: 100%;
+  }
+}
