@@ -3,3 +3,36 @@ div.sator-helyszinek {
   margin-bottom: 20px;
   font-size: 18px;
 }
+
+:host ::ng-deep p-dropdown > div {
+  margin-bottom: 30px;
+  margin-top: 10px;
+  width: 32%;
+}
+
+@media only screen and (max-width: 520px) {
+  :host ::ng-deep p-dropdown > div {
+    width: 100%;
+  }
+}
+
+div.content-element > h6 {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
+
+:host ::ng-deep p-overlaypanel img {
+  max-width: 900px;
+}
+
+@media only screen and (max-width: 520px) {
+  :host ::ng-deep p-overlaypanel > div {
+    width: 90%;
+  }
+
+  :host ::ng-deep p-overlaypanel img {
+    width: 100%;
+  }
+}

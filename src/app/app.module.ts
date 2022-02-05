@@ -44,6 +44,8 @@ import {StopvecseyComponent} from './stopvecsey/stopvecsey.component';
 import {CheckboxModule} from 'primeng/checkbox';
 import {NgcCookieConsentModule, NgcCookieConsentConfig} from 'ngx-cookieconsent';
 import {environment} from '../environments/environment';
+import {TableModule} from 'primeng/table';
+import {OverlayPanelModule} from 'primeng/overlaypanel';
 
 // Beállítás:
 // https://tinesoft.github.io/ngx-cookieconsent/home
@@ -120,6 +122,8 @@ const cookieConfig:NgcCookieConsentConfig = {
     MessagesModule,
     MessageModule,
     CheckboxModule,
+    TableModule,
+    OverlayPanelModule,
     NgcCookieConsentModule.forRoot(cookieConfig)
 
   ],

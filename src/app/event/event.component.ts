@@ -4,6 +4,8 @@ import {TokenService} from '../service/token.service';
 import {DomSanitizer} from '@angular/platform-browser';
 import {SystemService} from '../service/system.service';
 import {Event} from '../common/calendar/model/event.model';
+import {ddSelectItem} from '../common/tweet/tweet.component';
+import {SelectItem} from 'primeng/api';
 
 @Component({
   selector: 'hohn-event',
@@ -14,6 +16,13 @@ export class EventComponent implements OnInit {
 
   public eventList: Event[] = [];
   public currentYear: string = '';
+  public days = ['Vasárnap', 'Hétfő', 'Kedd', 'Szerda', 'Csütörtök', 'Péntek', 'Szombat'];
+
+
+  public telepulesLista: SelectItem[] = [];
+  public telepulesStrLista: string[] = [];
+
+  public selectedTelepules: ddSelectItem;
 
   constructor(
     private headerService: HeaderService,
@@ -27,6 +36,17 @@ export class EventComponent implements OnInit {
     this.headerService.setHeaderStyle('style-2');
     this.setCurrentYear();
     this.initEvents();
+    this.fillDropDown();
+  }
+
+  public change(event$: SelectItem): void {
+    if (!!event$) {
+      this.eventList = this.systemService.getEvents()
+        .filter( (event: Event) => event.datum.getTime() > new Date().getTime() && event.hely.includes(this.selectedTelepules.value));
+    } else {
+      this.eventList = this.systemService.getEvents()
+        .filter( (event: Event) => event.datum.getTime() > new Date().getTime());
+    }
   }
 
   private setCurrentYear(): void {
@@ -34,8 +54,30 @@ export class EventComponent implements OnInit {
   }
 
   private initEvents(): void {
-    this.eventList = this.systemService.getEvents().filter( (event: Event) => event.datum.getTime() > new Date().getTime());
+    this.eventList = this.systemService.getEvents()
+      .filter( (event: Event) => event.datum.getTime() > new Date().getTime())
+      .sort(function(a,b){
+        return new Date(a.datum).getTime() - new Date(b.datum).getTime();
+      });
 
+  }
+
+  private fillDropDown(): void {
+    this.systemService.getEvents()
+      .filter( (event: Event) => event.datum.getTime() > new Date().getTime())
+      .forEach((event: Event) => {
+        const telepules: string = this.getTelepules(event.hely);
+        if (!this.telepulesStrLista.includes(telepules)) {
+          this.telepulesStrLista.push(telepules);
+        }
+      });
+    this.telepulesStrLista.forEach((telepules: string) => {
+      this.telepulesLista.push({label: telepules, value: telepules});
+    });
+  }
+
+  private getTelepules(hely: string): string {
+    return hely.split('-')[0].substr(5);
   }
 
 }

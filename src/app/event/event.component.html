@@ -29,15 +29,28 @@
 <!--          <a href="assets/doc/satorhelyszinek.xlsx">További kitelepülések helyszínei (Az információ letöltéséhez kérem, kattintson ide!)</a>-->
 <!--        </div>-->
 
+        <h6 (click)="op.toggle($event)">Az ügyeleti iroda időpontjainak megtekintéséhez, kérem, kattintson ide!</h6>
         <div *ngIf="!eventList.length; else noEvent" class="content-element4">
 
           <h3>Nem várható esemény a közeljövőben ...</h3>
 
         </div>
 
-        <ng-template #noEvent>
-          <div class="events-holder">
 
+
+        <ng-template #noEvent>
+
+          <div class="events-holder">
+            <p-dropdown
+              [options]="telepulesLista"
+              [(ngModel)]="selectedTelepules"
+              placeholder="Válasszon települést az események szűkítéséhez"
+              [filter]=true
+              (onChange)="change($event.value)"
+              optionLabel="label"
+              [showClear]="true"
+            >
+            </p-dropdown>
             <div *ngFor="let event of eventList" class="event-item">
 
               <div class="row">
@@ -57,7 +70,7 @@
                       <!--                    <h6 class="event-price f-right"><b>$15</b></h6>-->
                     </div>
                     <div class="event-desc">
-                      <time datetime="2018-07-25">{{event.datum.toLocaleDateString()}}</time> &nbsp; |  &nbsp; {{event.idopont}} <br>
+                      <time datetime="2018-07-25">{{event.datum.toLocaleDateString() + ' ' + days[event.datum.getDay()]}}</time> &nbsp; |  &nbsp; {{event.idopont}} <br>
                       {{event.hely}}
                     </div>
                     <div [innerHTML]="event.htmlContent"></div>
@@ -72,6 +85,9 @@
     </div>
   </div>
 </div>
+<p-overlayPanel #op [showCloseIcon]="true">
+    <img src="assets/images/event/iroda.jpg" alt="">
+</p-overlayPanel>
 
 
 
