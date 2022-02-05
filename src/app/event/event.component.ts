@@ -44,8 +44,7 @@ export class EventComponent implements OnInit {
       this.eventList = this.systemService.getEvents()
         .filter( (event: Event) => event.datum.getTime() > new Date().getTime() && event.hely.includes(this.selectedTelepules.value));
     } else {
-      this.eventList = this.systemService.getEvents()
-        .filter( (event: Event) => event.datum.getTime() > new Date().getTime());
+      this.initEvents();
     }
   }
 
