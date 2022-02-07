@@ -42,7 +42,10 @@ export class EventComponent implements OnInit {
   public change(event$: SelectItem): void {
     if (!!event$) {
       this.eventList = this.systemService.getEvents()
-        .filter( (event: Event) => event.datum.getTime() > new Date().getTime() && event.hely.includes(this.selectedTelepules.value));
+        .filter( (event: Event) => event.datum.getTime() > new Date().getTime() && event.hely.includes(this.selectedTelepules.value))
+        .sort(function(a,b){
+          return new Date(a.datum).getTime() - new Date(b.datum).getTime();
+        });
     } else {
       this.initEvents();
     }

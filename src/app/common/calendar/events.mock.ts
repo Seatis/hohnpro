@@ -186,10 +186,10 @@ export const Events: Event[] = [
     datum: new Date('2022-02-12T11:00:00'),
     cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Isaszeg',
     url: '/event',
-    hely: '2117 Isaszeg - Sósperec Pékség előtt',
+    hely: '2117 Isaszeg - körforgalomnál',
     idopont: '11:00 – 16:00',
     kepUrl: 'assets/images/event/isaszeg.jpg',
-    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Sósperec Pékség előtt</strong></p>`
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>körforgalomnál</strong></p>`
   },
   {
     id: 17,
@@ -360,5 +360,25 @@ export const Events: Event[] = [
     idopont: '15:00 – 19:00',
     kepUrl: 'assets/images/event/mogyorod.jpg',
     htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>HÉV állomás</strong></p>`
+  },
+  {
+    id: 34,
+    datum: new Date('2022-02-13T14:00:00'),
+    cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Szada',
+    url: '/event',
+    hely: '2111 Szada - Székely Bertalan út 14-17.',
+    idopont: '14:00 – 17:00',
+    kepUrl: 'assets/images/event/szada.jpg',
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Nonna Cukrászda mellett</strong></p>`
+  },
+  {
+    id: 35,
+    datum: new Date('2022-02-14T15:00:00'),
+    cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Nagytarcsa',
+    url: '/event',
+    hely: '2142 Nagytarcsa - Polgármesteri Hivatallal szembeni parkoló',
+    idopont: '15:00 – 18:00',
+    kepUrl: 'assets/images/event/nagytarcsa.jpg',
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Polgármesteri Hivatallal szembeni parkoló</strong></p>`
   }
 ];
