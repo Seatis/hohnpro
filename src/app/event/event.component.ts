@@ -43,9 +43,7 @@ export class EventComponent implements OnInit {
     if (!!event$) {
       this.eventList = this.systemService.getEvents()
         .filter( (event: Event) => event.datum.getTime() > new Date().getTime() && event.hely.includes(this.selectedTelepules.value))
-        .sort(function(a,b){
-          return new Date(a.datum).getTime() - new Date(b.datum).getTime();
-        });
+        .sort((a, b) => (new Date(a.datum).getTime() > new Date(b.datum).getTime() ? 1 : -1));
     } else {
       this.initEvents();
     }
@@ -58,9 +56,7 @@ export class EventComponent implements OnInit {
   private initEvents(): void {
     this.eventList = this.systemService.getEvents()
       .filter( (event: Event) => event.datum.getTime() > new Date().getTime())
-      .sort(function(a,b){
-        return new Date(a.datum).getTime() - new Date(b.datum).getTime();
-      });
+      .sort((a, b) => (new Date(a.datum).getTime() > new Date(b.datum).getTime() ? 1 : -1));
 
   }
 
@@ -68,17 +64,18 @@ export class EventComponent implements OnInit {
     this.systemService.getEvents()
       .filter( (event: Event) => event.datum.getTime() > new Date().getTime())
       .forEach((event: Event) => {
-        const telepules: string = this.getTelepules(event.hely);
+        const telepules: string = EventComponent.getTelepules(event.hely);
         if (!this.telepulesStrLista.includes(telepules)) {
           this.telepulesStrLista.push(telepules);
         }
       });
+    this.telepulesStrLista.sort((a, b) => (a > b ? 1 : -1));
     this.telepulesStrLista.forEach((telepules: string) => {
-      this.telepulesLista.push({label: telepules, value: telepules});
+          this.telepulesLista.push({label: telepules, value: telepules});
     });
   }
 
-  private getTelepules(hely: string): string {
+  private static getTelepules(hely: string): string {
     return hely.split('-')[0].substr(5);
   }
 
