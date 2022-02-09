@@ -66,10 +66,10 @@ export const Events: Event[] = [
     datum: new Date('2022-02-12T10:00:00'),
     cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Gödöllő',
     url: '/event',
-    hely: '2100 Gödöllő - Főtér Coop előtt',
+    hely: '2100 Gödöllő - Főtér, Coop mellett',
     idopont: '10:00 – 17:00',
     kepUrl: 'assets/images/event/godollo.jpg',
-    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér Coop előtt.</strong></p>`
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér, Coop mellett.</strong></p>`
   },
   {
     id: 5,
@@ -78,7 +78,7 @@ export const Events: Event[] = [
     url: '/event',
     hely: '2100 Gödöllő - SPAR mellett Remsey Jenő Krt.',
     idopont: '10:00 – 13:00',
-    kepUrl: 'assets/images/event/godollo.jpg',
+    kepUrl: 'assets/images/event/godollo_spar.jpg',
     htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>SPAR mellett Remsey Jenő Krt.</strong></p>`
   },
   {
@@ -86,10 +86,10 @@ export const Events: Event[] = [
     datum: new Date('2022-02-13T10:00:00'),
     cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Gödöllő',
     url: '/event',
-    hely: '2100 Gödöllő - Főtér Coop előtt',
+    hely: '2100 Gödöllő - Főtér, Coop mellett',
     idopont: '10:00 – 16:00',
     kepUrl: 'assets/images/event/godollo.jpg',
-    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér Coop előtt.</strong></p>`
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér, Coop mellett.</strong></p>`
   },
   {
     id: 7,
@@ -98,7 +98,7 @@ export const Events: Event[] = [
     url: '/event',
     hely: '2100 Gödöllő - SPAR mellett Remsey Jenő Krt.',
     idopont: '10:00 – 13:00',
-    kepUrl: 'assets/images/event/godollo.jpg',
+    kepUrl: 'assets/images/event/godollo_spar.jpg',
     htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>SPAR mellett Remsey Jenő Krt.</strong></p>`
   },
   {
@@ -106,60 +106,60 @@ export const Events: Event[] = [
     datum: new Date('2022-02-14T09:00:00'),
     cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Gödöllő',
     url: '/event',
-    hely: '2100 Gödöllő - Főtér Coop előtt',
+    hely: '2100 Gödöllő - Főtér, Coop mellett',
     idopont: '09:00 – 13:00 és 14:00 - 17:00',
     kepUrl: 'assets/images/event/godollo.jpg',
-    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér Coop előtt.</strong></p>`
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér, Coop mellett.</strong></p>`
   },
   {
     id: 9,
     datum: new Date('2022-02-15T09:00:00'),
     cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Gödöllő',
     url: '/event',
-    hely: '2100 Gödöllő - Főtér Coop előtt',
+    hely: '2100 Gödöllő - Főtér, Coop mellett',
     idopont: '09:00 – 13:00 és 14:00 - 17:00',
     kepUrl: 'assets/images/event/godollo.jpg',
-    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér Coop előtt.</strong></p>`
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér, Coop mellett.</strong></p>`
   },
   {
     id: 10,
     datum: new Date('2022-02-16T09:00:00'),
     cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Gödöllő',
     url: '/event',
-    hely: '2100 Gödöllő - Főtér Coop előtt',
+    hely: '2100 Gödöllő - Főtér, Coop mellett',
     idopont: '09:00 – 13:00 és 14:00 - 17:00',
     kepUrl: 'assets/images/event/godollo.jpg',
-    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér Coop előtt.</strong></p>`
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér, Coop mellett.</strong></p>`
   },
   {
     id: 11,
     datum: new Date('2022-02-17T09:00:00'),
     cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Gödöllő',
     url: '/event',
-    hely: '2100 Gödöllő - Főtér Coop előtt',
+    hely: '2100 Gödöllő - Főtér, Coop mellett',
     idopont: '09:00 – 13:00 és 14:00 - 17:00',
     kepUrl: 'assets/images/event/godollo.jpg',
-    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér Coop előtt.</strong></p>`
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér, Coop mellett.</strong></p>`
   },
   {
     id: 12,
     datum: new Date('2022-02-18T09:00:00'),
     cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Gödöllő',
     url: '/event',
-    hely: '2100 Gödöllő - Főtér Coop előtt',
+    hely: '2100 Gödöllő - Főtér, Coop mellett',
     idopont: '09:00 – 13:00 és 14:00 - 17:00',
     kepUrl: 'assets/images/event/godollo.jpg',
-    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér Coop előtt.</strong></p>`
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér, Coop mellett.</strong></p>`
   },
   {
     id: 13,
     datum: new Date('2022-02-19T09:00:00'),
     cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Gödöllő',
     url: '/event',
-    hely: '2100 Gödöllő - Főtér Coop előtt',
+    hely: '2100 Gödöllő - Főtér, Coop mellett',
     idopont: '09:00 – 13:00 és 14:00 - 17:00',
     kepUrl: 'assets/images/event/godollo.jpg',
-    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér Coop előtt.</strong></p>`
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Főtér, Coop mellett.</strong></p>`
   },
   {
     id: 14,
@@ -380,5 +380,15 @@ export const Events: Event[] = [
     idopont: '15:00 – 18:00',
     kepUrl: 'assets/images/event/nagytarcsa.jpg',
     htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Polgármesteri Hivatallal szembeni parkoló</strong></p>`
+  },
+  {
+    id: 36,
+    datum: new Date('2022-02-12T10:30:00'),
+    cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Gödöllő',
+    url: '/event',
+    hely: '2100 Gödöllő Palotakert 19. - Coop előtt',
+    idopont: '10:30 – 12:00 és 14:00 - 17:00',
+    kepUrl: 'assets/images/event/godollo_coop.jpg',
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Palotakert 19. - Coop előtt</strong></p>`
   }
 ];
