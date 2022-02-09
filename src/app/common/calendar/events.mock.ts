@@ -390,5 +390,25 @@ export const Events: Event[] = [
     idopont: '10:30 – 12:00 és 14:00 - 17:00',
     kepUrl: 'assets/images/event/godollo_coop.jpg',
     htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Palotakert 19. - Coop előtt</strong></p>`
+  },
+  {
+    id: 37,
+    datum: new Date('2022-02-12T11:00:00'),
+    cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Kistarcsa',
+    url: '/event',
+    hely: '2143 Kistarcsa - Zöld ABC előtt',
+    idopont: '11:00 – 15:00',
+    kepUrl: 'assets/images/event/kistarcsa.jpg',
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Zöld ABC előtt</strong></p>`
+  },
+  {
+    id: 38,
+    datum: new Date('2022-02-13T11:00:00'),
+    cim: 'Országgyűlési Választás 2022. - Ajánlásgyűjtés - Kistarcsa',
+    url: '/event',
+    hely: '2143 Kistarcsa - Zöld ABC előtt',
+    idopont: '11:00 – 15:00',
+    kepUrl: 'assets/images/event/kistarcsa.jpg',
+    htmlContent: `<p>Országgyűlési Választás 2022. - Ajánlásgyűjtés.<br />Helypontosítás: <strong>Zöld ABC előtt</strong></p>`
   }
 ];
