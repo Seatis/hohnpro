@@ -595,20 +595,28 @@ iframe {
   margin-right: auto;
 }
 
-:host ::ng-deep #aktivista img, :host ::ng-deep #tamogass img {
+:host ::ng-deep #aktivista img, :host ::ng-deep #tamogass img, :host ::ng-deep #hohncsapat img {
   width: 100%;
   max-width: 900px;
   cursor: pointer;
 }
 
-:host ::ng-deep #aktivista, :host ::ng-deep #tamogass {
+:host ::ng-deep #aktivista, :host ::ng-deep #tamogass, :host ::ng-deep #hohncsapat {
   padding-bottom: 50px;
 }
 
 :host ::ng-deep #aktivista img {
-  width: 100%;
   max-width: 635px;
-  cursor: pointer;
+}
+
+:host ::ng-deep #hohncsapat img {
+  max-width: 850px;
+}
+
+:host ::ng-deep #hohncsapat a {
+  font-size: 1.2em;
+  color: blue;
+  font-width: bold;
 }
 
 :host ::ng-deep #stopvecsey img {
@@ -634,7 +642,7 @@ h2.connect-title {
 }
 
 @media (max-width: 576px) {
-  :host ::ng-deep #aktivista h2 {
+  :host ::ng-deep #aktivista h2, :host ::ng-deep #hohncsapat h2 {
     font-size: 2.1em;
   }
 }

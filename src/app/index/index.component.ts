@@ -53,11 +53,15 @@ export class IndexComponent implements OnInit {
   }
 
   public openAktivista(): void {
-    window.open(" https://www.20k.hu/jelentkezz/")
+    window.open('https://www.20k.hu/jelentkezz/');
+  }
+
+  public openHohnCsapat(): void {
+    window.open('https://an.hohn.hu/forms/hohn-aktivista-jelentkezes/');
   }
 
   public openTamogass(): void {
-    window.open("https://lmp.hu/tamogassahohnkrisztinat/")
+    window.open('https://lmp.hu/tamogassahohnkrisztinat/');
   }
 
   // public enablePopUp(): void {
